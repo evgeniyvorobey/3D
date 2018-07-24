@@ -34,10 +34,10 @@ window.onload = function() {
 
 var owl = $('.owl-slider-first');
 owl.owlCarousel({
-    items:5,
     loop:true,
     margin:10,
     autoplay:true,
+    navText : ["",""],
     autoplayTimeout:3000,
     autoplayHoverPause:true,
     responsive:{
