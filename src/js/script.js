@@ -1,3 +1,4 @@
+
 var hamburger = document.getElementsByClassName('hamburger')[0];
 
 hamburger.onclick = function() {
@@ -10,5 +11,23 @@ hamburger.onclick = function() {
 
     rightSide.classList.toggle('right-side-active');
     navigation.classList.toggle('navigation-active');
+}
 
+// Show models
+var models = document.getElementsByClassName('nav-item')[2];
+models.onclick = function() {
+    var categoryBlock = document.getElementsByClassName('category-block')[0];
+    categoryBlock.classList.toggle('category-block-active');
+}
+
+
+
+window.onload = function() {
+    var categoryItem = document.getElementsByClassName('category-item');
+    for (let i = 0; i < categoryItem.length; i++) {
+        if(categoryItem[i].childNodes[1].childNodes[1].childNodes[1].naturalHeight > categoryItem[i].childNodes[1].childNodes[1].childNodes[1].naturalWidth) {
+            categoryItem[i].childNodes[1].childNodes[1].childNodes[1].style.height = 100 + '%';
+            categoryItem[i].childNodes[1].childNodes[1].childNodes[1].style.width = 'auto';
+        }
+    }
 }
