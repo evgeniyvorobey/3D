@@ -124,6 +124,37 @@ $('.stop').on('click',function(){
     owl.trigger('stop.owl.autoplay')
 })
 
+var owl = $('.owl-slider-fourth');
+owl.owlCarousel({
+    loop:true,
+    margin:10,
+    autoplay:true,
+    nav:true,
+    dotsEach:3,
+    navContainer:'.nav-for-owl-fourth',
+    dotsContainer:'.dot-fourth',
+    navText : ["",""],
+    autoplayTimeout:3000,
+    autoplayHoverPause:true,
+    responsive:{
+        0:{
+            items:2
+        },
+        768:{
+            items:2
+        },
+        1024:{
+            items:3
+        }
+    }
+});
+$('.play').on('click',function(){
+    owl.trigger('play.owl.autoplay',[1000])
+})
+$('.stop').on('click',function(){
+    owl.trigger('stop.owl.autoplay')
+})
+
 var descriptionToggle = document.getElementsByClassName('added-description-toggle')[0];
 
 descriptionToggle.onclick = function(event) {
