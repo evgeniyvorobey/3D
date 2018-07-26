@@ -614,6 +614,7 @@ ul, li{
 }
 .company-we-work{
     background: #393B3F;
+    padding: 20px 0 40px 0;
 }
 .company-we-work .slider-description{
     flex-direction: column;
@@ -621,14 +622,26 @@ ul, li{
 }
 .company-we-work h3{
     color: #D3D3D3;
+    padding-bottom: 60px;
 }
 .nav-for-owl-fourth{
     display: flex;
     align-items: center;
 }
-// .owl-slider-fourth img{
-//     transform: 
-// }
+.owl-slider-fourth .item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #393B3F
+}
+.owl-slider-fourth .owl-stage{
+    display: flex;
+    align-items: center;
+}
+.item-container{
+    background: #393B3F;
+}
+
 footer{
     background: #222325;
 }
@@ -687,6 +700,7 @@ footer{
 .footer-floor{
     display: flex;
     flex-direction: column-reverse;
+    padding: 40px 0 0 0;
 }
 .floor-link ul{
     display: flex;
@@ -733,11 +747,23 @@ footer{
     .search{
         width: 66%;
     }
+    .company-we-work-wrapper,
+    .future-service-wrapper,
+    .slider-second,
+    .slider-third,
+    .newly-addedwrapper,
+    .slider-first,
     .footer-wrapper,
-    .wrapper{
+    .wrapper-serch,
+    .wrapper-for-category{
         position: relative;
         margin: 0 auto;
         width: 753px;
+        padding: 70px 0;
+    }
+    .wrapper-for-category,
+    .wrapper-serch{
+        padding: 0;
     }
     .category-block{
         width: 100%;
@@ -801,7 +827,10 @@ footer{
     .footer-floor{
         flex-direction: row;
         align-items: center;
-        justify-content: space-between
+        justify-content: space-between;
+    }
+    .footer-wrapper{
+        padding-bottom: 0;
     }
     .floor-copiright{
         align-items: center;
@@ -819,8 +848,16 @@ footer{
     .category-block-active{
         transform: translateY(-370px);
         padding: 30px 0;
-    }.footer-wrapper,
-    .wrapper{
+    }
+    .company-we-work-wrapper,
+    .future-service-wrapper,
+    .slider-second,
+    .slider-third,
+    .newly-addedwrapper,
+    .slider-first,
+    .footer-wrapper,
+    .wrapper-serch,
+    .wrapper-for-category{
         margin: 0 auto;
         width: 1009px;
     }
@@ -847,8 +884,16 @@ footer{
     .title-search{
         background: none;
         top: -360px;
-    }.footer-wrapper,
-    .wrapper{
+    }
+    .company-we-work-wrapper,
+    .future-service-wrapper,
+    .slider-second,
+    .slider-third,
+    .newly-addedwrapper,
+    .slider-first,
+    .footer-wrapper,
+    .wrapper-serch,
+    .wrapper-for-category{
         margin: 0 auto;
         width: 1185px;
     }
