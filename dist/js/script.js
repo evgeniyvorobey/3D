@@ -144,7 +144,7 @@ owl.owlCarousel({
             items:4
         },
         1024:{
-            items:5
+            items:6
         }
     }
 });
