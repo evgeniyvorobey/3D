@@ -1,10 +1,15 @@
 body{
     font-family: 'Open Sans', sans-serif;
 }
+.wrapper-for-header-category{
+    position: relative;
+    margin: 0 auto;
+}
 nav{
     padding: 25px 0 0 0;
     margin: 0 auto;
     position: relative;
+    font-weight: 100;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -29,7 +34,8 @@ ul, li{
     position: relative;
     display: flex;
     align-items: center;
-    padding: 0 10px;
+    padding: 0 3px;
+    margin: 0 5px;
 
 }
 .left-side .nav-item:nth-child(1){
@@ -86,6 +92,20 @@ ul, li{
 .left-side .nav-item:hover .sub-navigation{
     display: block;
 }
+#header-search{
+    position: relative;
+}
+#header-search input{
+    border: 1px solid #537BE6;
+    border-radius: 20px;
+    height: 25px;
+}
+.search-img{
+    position: absolute;
+    right: 14px;
+    width: 17px;
+    height: 17px;
+}
 
 
 .hamburger{
@@ -131,6 +151,76 @@ ul, li{
     top: -55px;
 }
 
+.category-block-header{
+    position: absolute;
+    margin: 0 auto;
+    padding: 3px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 90%;
+    background: #fff;
+    box-shadow: 0 0 15px -6px;
+    border-radius: 3px;
+    margin-left: 5%;
+    z-index: 2;
+    transform: translateY(-450%);
+    transition: .3s ease-in-out;
+    z-index: 10;
+}
+.category-item{
+    position: relative;
+    width: 20%;
+    // height: 100px;
+    padding: 10px;
+    margin: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    border-radius: 5px;
+    background: transparent;
+    transition: .1s ease-in-out;
+}
+.category-item:hover{
+    background: linear-gradient(to left, #4275e3, #5885fa);
+    box-shadow: 0 0 15px -3px;
+
+}
+.category-item:hover p{
+    color: #fff;
+}
+.category-item div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    margin-bottom: 20px;
+}
+.category-item img{
+    width: 100%;
+    max-width: 150px;
+    height: auto;
+}
+.category-item a{
+    text-align: center;
+    text-decoration: none;
+}
+.category-item p{
+    position: absolute;
+    font-size: 10px;
+    text-align: center;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    padding-bottom: 5px;
+    margin: 0;
+    color: black;
+}
+.category-block-active{
+    transform: translateY(10px);
+}
 
 @media (max-width:767px) {
     .right-side{
@@ -138,7 +228,7 @@ ul, li{
         align-items: center;
         justify-content:center;
         position: absolute;
-        top: 80px;
+        top: 55px;
         width: 100%;
         height: 0px;
         background: rgb(52, 96, 213);
@@ -147,7 +237,7 @@ ul, li{
     .right-side .navigation{
         align-items: center;
         flex-direction: column;
-        transform: rotateX(90deg) translateY(100px);
+        transform: rotateX(90deg) translateY(150px);
         transition: .2s ease-in-out;   
     }
     .right-side .nav-item{
@@ -157,7 +247,7 @@ ul, li{
         text-align: center;
     }
     .right-side-active{
-        height: 230px;
+        height: 320px;
     }
     .right-side .navigation-active{
         display: flex;
@@ -174,16 +264,48 @@ ul, li{
     .left-side .nav-item:nth-child(2){
         display: flex;
     }
+    .wrapper-for-header-category,
     nav{
         width: 753px;
     }
+    .category-block-header{
+        width: 100%;
+        margin: 0;
+    }
+    .category-item{
+        width: 9%;
+        padding: 4;
+        margin: 3px;
+    }
+    .category-item div{
+        width: 60px;
+        height: 60px;
+    }
+    .category-item p{
+        font-size: 11px;
+    }
+    .category-block-active{
+        transform: translateY(0);
+    }
 }
 @media (min-width: 1024px) {
+    .wrapper-for-header-category,
+
     nav{
         width: 1009px;
     }
+    .category-item{
+        padding: 15px 0;
+        width: 8%;
+        margin: 7px;
+    }
+    .category-item p{
+        font-size: 12px;
+    }
+
 }
 @media (min-width: 1200px) {
+    .wrapper-for-header-category,
     nav{
         width: 1185px;
     }

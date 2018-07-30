@@ -1,3 +1,12 @@
+clearSerch();
+
+function clearSerch() {
+    var serch = document.getElementById('header-search')
+
+    if (document.title == '3D MARKETPLACE') {
+        serch.style.display = 'none';
+    }
+}
 
 var hamburger = document.getElementsByClassName('hamburger')[0];
 
@@ -16,13 +25,13 @@ hamburger.onclick = function() {
 // Show models
 var models = document.getElementsByClassName('nav-item')[2];
 models.onclick = function() {
-    var categoryBlock = document.getElementsByClassName('category-block')[0];
+    var categoryBlock = document.getElementsByClassName('category-block-header')[0];
     categoryBlock.classList.toggle('category-block-active');
 }
 
 
-
 window.onload = function() {
+
     var categoryItem = document.getElementsByClassName('category-item');
 
     for (let i = 0; i < categoryItem.length; i++) {
