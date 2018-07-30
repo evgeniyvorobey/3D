@@ -681,6 +681,7 @@ li {
 }
 
 .nav-for-owl {
+	width: 100px;
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
@@ -756,6 +757,11 @@ li {
 
 .owl-stage .active {
 	background: transparent;
+}
+
+.about-us-talk {
+	margin: 50px auto;
+	width: 95%;
 }
 
 .about-us-talk-description {
@@ -1118,7 +1124,7 @@ nav {
 
 .about-us-talk {
 	width: 768px;
-	margin: 0 auto;
+	margin: 50px auto;
 }
 
 .footer-wrapper {

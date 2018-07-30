@@ -278,6 +278,7 @@
 }
 
 .nav-for-owl{
+    width: 100px;
     display: flex;
     align-items: center;
 }
@@ -336,7 +337,10 @@
 .owl-stage .active{
     background: transparent;
 }
-
+.about-us-talk{
+    margin:  50px auto;
+    width: 95%;
+}
 .about-us-talk-description{
     display: flex;
     position: relative;
@@ -474,7 +478,7 @@
     }
     .about-us-talk{
         width: 768px;
-        margin: 0 auto;
+        margin: 50px auto;
     }
 }
 @media (min-width: 1024px){
