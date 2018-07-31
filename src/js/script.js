@@ -34,7 +34,7 @@ window.onload = function() {
 
     var categoryItem = document.getElementsByClassName('category-item');
 
-    for (let i = 0; i < categoryItem.length; i++) {
+    for (var i = 0; i < categoryItem.length; i++) {
         if(categoryItem[i].childNodes[1].childNodes[1].childNodes[1].naturalHeight > categoryItem[i].childNodes[1].childNodes[1].childNodes[1].naturalWidth) {
             categoryItem[i].childNodes[1].childNodes[1].childNodes[1].style.height = 100 + '%';
             categoryItem[i].childNodes[1].childNodes[1].childNodes[1].style.width = 'auto';
