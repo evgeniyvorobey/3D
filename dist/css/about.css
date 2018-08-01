@@ -1,3 +1,58 @@
+.wrapper-for-bread-crumbs {
+	margin: 0 auto;
+	position: relative;
+}
+
+.bread-crumbs {
+	position: absolute;
+	z-index: 1;
+}
+
+.bread-crumbs ul {
+	height: 70px;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: row;
+	flex-direction: row;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	color: #D8D8D8;
+}
+
+.bread-crumbs li {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: row;
+	flex-direction: row;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	font-size: 12px;
+	margin-right: 30px;
+}
+
+.bread-crumbs li:nth-child(1) {
+	color: #ADADAD;
+}
+
+.arrow {
+	display: block;
+	width: 6px;
+	height: 6px;
+	border-right: 1px solid #D8D8D8;
+	border-top: 1px solid #D8D8D8;
+	-webkit-transform: rotate(45deg);
+	transform: rotate(45deg);
+	margin-left: 10px;
+}
+
 .background {
 	position: relative;
 	display: -webkit-box;
@@ -559,7 +614,8 @@
 
 @media (min-width: 768px) {
 
-.history {
+.history,
+.wrapper-for-bread-crumbs {
 	margin: 0 auto;
 	width: 768px;
 }
@@ -654,7 +710,8 @@
 
 .history,
 .team-wrap,
-.about-us-talk {
+.about-us-talk,
+.wrapper-for-bread-crumbs {
 	width: 1024px;
 	padding: 0 5px;
 }
@@ -673,7 +730,8 @@
 
 .history,
 .team-wrap,
-.about-us-talk {
+.about-us-talk,
+.wrapper-for-bread-crumbs {
 	width: 1200px;
 }
 

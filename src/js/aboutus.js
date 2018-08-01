@@ -1,14 +1,4 @@
-clearSerch();
-
-function clearSerch() {
-    var serch = document.getElementById('header-search')
-
-    if (document.title == '3D MARKETPLACE') {
-        serch.style.display = 'none';
-    }
-}
-
-
+// ----------------------- Hamburger drop down menu
 
 var hamburger = document.getElementsByClassName('hamburger')[0];
 var hamburgerItem = document.getElementsByClassName('hamburger-item');
@@ -48,16 +38,25 @@ var closeButton = document.getElementsByClassName('close-button')[0];
 var logInBlock = document.getElementsByClassName('log-in')[0];
 var forgotPassword = document.getElementById('forgot-password');
 var restoreBlock = document.getElementsByClassName('restoring-password')[0];
+var shade = document.getElementsByClassName('shade')[0];
 
+function shadeOn() {
+    shade.classList.add('active-shade', 'shade-in')
+}
+function shadeOff() {
+    shade.classList.remove('active-shade')
+}
 
 
     logInButton.onclick = function() {
     if ( hamburgerItem[0].classList.length == "2") {
         closeHamburger();
     }
+    shadeOn();
     logInBlock.classList.toggle('log-in-active');
     closeButton.onclick = function() {
         logInBlock.classList.toggle('log-in-active');
+        shadeOff();
     }
 }
 
@@ -118,6 +117,12 @@ window.onload = function() {
     }
 
 }
+
+
+// ----------------------------- END HEADER SCRIPTS
+
+
+//------------------------------- SLIDER 
 
 var owl = $('.owl-carousel');
 owl.owlCarousel({
