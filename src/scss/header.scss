@@ -589,6 +589,12 @@ ul, li{
     nav{
         width: 1009px;
     }
+    .left-side .nav-item{
+        margin-right: 25px;
+    }
+    .right-side .nav-item{
+        margin-left: 25px;
+    }
     .category-item{
         padding: 15px 0;
         width: 8%;
