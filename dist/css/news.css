@@ -32,6 +32,9 @@ nav a {
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
 	color: white;
 	text-decoration: none;
 	cursor: pointer;
@@ -62,7 +65,14 @@ li {
 	-ms-flex-align: center;
 	align-items: center;
 	padding: 0 4px;
-	margin: 0 5px;
+}
+
+.left-side .nav-item {
+	margin-right: 10px;
+}
+
+.right-side .nav-item {
+	margin-left: 10px;
 }
 
 .left-side .nav-item:nth-child(1) {
@@ -84,6 +94,7 @@ li {
 	background: -webkit-gradient(linear, right top, left top, from(#4275e3), to(#5885fa));
 	background: linear-gradient(to left, #4275e3, #5885fa);
 	border-radius: 4px;
+	padding: 0 0 0 10px;
 	-webkit-box-shadow: 0px 0px 25px -10px;
 	box-shadow: 0px 0px 25px -10px;
 	-webkit-transition: .1s ease-in-out;
@@ -95,8 +106,9 @@ li {
 }
 
 .right-side img {
-	width: 14px;
-	height: 14px;
+	width: auto;
+	height: 12px;
+	margin-right: 5px;
 }
 
 .right-side .nav-item:nth-child(3) a img,
@@ -114,6 +126,7 @@ li {
 	content: '';
 	position: relative;
 	left: 7px;
+	top: -1px;
 	display: inline-block;
 	width: 6px;
 	height: 6px;
