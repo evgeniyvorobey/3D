@@ -621,9 +621,9 @@
 }
 
 .history-head {
-	-webkit-box-pack: end;
-	-ms-flex-pack: end;
-	justify-content: end;
+	-webkit-box-pack: start;
+	-ms-flex-pack: start;
+	justify-content: start;
 }
 
 .location,

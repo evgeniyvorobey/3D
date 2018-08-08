@@ -1,3 +1,7 @@
+input {
+	padding: 0 0 0 20px;
+}
+
 body {
 	font-family: 'Open Sans', sans-serif;
 }
@@ -56,7 +60,7 @@ li {
 .nav-item {
 	-webkit-box-sizing: content-box;
 	box-sizing: content-box;
-	font-size: 13px;
+	font-size: 12px;
 	position: relative;
 	display: -webkit-box;
 	display: -ms-flexbox;
@@ -119,6 +123,10 @@ li {
 .left-side .nav-item:nth-child(3):hover {
 	-webkit-box-shadow: 0px 0px 25px -6px;
 	box-shadow: 0px 0px 25px -6px;
+}
+
+#header-nav-log-in a {
+	width: 60px;
 }
 
 .left-side .nav-item:nth-child(2)::after,
@@ -360,14 +368,14 @@ li {
 }
 
 .log-in {
-	position: absolute;
+	position: fixed;
 	top: 50%;
 	left: 50%;
 	-webkit-transform: translate(-50%, -50%);
 	transform: translate(-50%, -50%);
 	background: #fff;
 	z-index: 10;
-	width: 300px;
+	width: 260px;
 	height: 500px;
 	display: none;
 	-webkit-box-shadow: 0px 0px 20px -8px;
@@ -379,7 +387,8 @@ li {
 	padding: 10px;
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
-	z-index: 10;
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
 }
 
 .close-button {
@@ -564,6 +573,11 @@ li {
 	left: 0;
 	width: 100%;
 	height: 15%;
+}
+
+.social-link-log-in p {
+	font-size: 14px;
+	color: #4b4b4b;
 }
 
 .social-link-log-in img {
@@ -1115,6 +1129,18 @@ a {
 .pages-button li a {
 	color: #4B4B4B;
 	font-size: 14px;
+	width: 100%;
+	height: 100%;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	text-decoration: none;
 }
 
 .pages-button .active-page {
@@ -1267,7 +1293,7 @@ footer {
 
 .wrapper-for-header-category,
 nav {
-	width: 753px;
+	width: 768px;
 }
 
 .category-block-header {
