@@ -6,6 +6,11 @@ body{
 }
 header{
     background: #2B55CD;
+    margin-bottom: 70px;
+}
+.long-line{
+    width: 100%;
+    border-bottom: 1px solid #D8D8D8;
 }
 .wrapper-for-header-category{
     position: relative;
@@ -523,6 +528,49 @@ ul, li{
 
 //log-in END
 
+a{
+    text-decoration: none;
+}
+.bread-crumbs{
+    position: absolute;
+    margin: 0 auto;
+    top: 55px;
+    width: 100%;
+    z-index: 1;
+}
+.bread-crumbs ul{
+    height: 70px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: #D8D8D8;
+}
+.bread-crumbs li{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 12px;
+    margin-right: 30px;
+}
+.bread-crumbs a:nth-child(1){
+    color: #ADADAD;
+}
+.bread-crumbs li span{
+    width: 6px;
+    height: 6px;
+    border-right: 1px solid #D8D8D8;
+    border-top: 1px solid #D8D8D8;
+}
+.arrow{
+    display: block;
+    width: 7px;
+    height: 7px;
+    border-right: 1px solid #4B4B4B;
+    border-top: 1px solid #4B4B4B;
+    transform: rotate(45deg);
+    margin-left: 10px;
+}
+
 @media (max-width:767px) {
     .right-side{
         display: flex;
@@ -534,6 +582,7 @@ ul, li{
         height: 0px;
         background: rgb(52, 96, 213);
         transition: .2s ease-in-out;
+        z-index: 2;
     }
     .right-side .navigation{
         align-items: center;

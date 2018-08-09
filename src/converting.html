@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/converting.css">
     <link rel="stylesheet" href="css/footer.css">
-    <title>Document</title>
+    <title>Conversion</title>
 </head>
 <body>
     <header>
@@ -41,6 +41,13 @@
                     <li class="nav-item"><a><img src="img/cart.png" alt="">0 items</a></li>
                     <li id="header-nav-log-in" class="nav-item "><a><img src="img/user.png" alt=""> Log in</a></li>
                 </ul>
+            </div>
+            <div class="bread-crumbs">
+                    <ul>
+                        <li><a href="">Main</a><span class="arrow"></span></li>
+                        <li><a href="">News</a><span class="arrow"></span></li>
+                        <li><a href="">Converting</a></li>
+                    </ul>
             </div>
         </nav>
         <div class="wrapper-for-header-category">
@@ -141,14 +148,7 @@
             </div>
         </div>
     </header>
-    <body>
-        <div class="bread-crumbs">
-            <ul>
-                <li><a href="">Main</a><span class="arrow"></span></li>
-                <li><a href="">News</a><span class="arrow"></span></li>
-                <li><a href="">Converting</a></li>
-            </ul>
-        </div>
+    <main>
         <div class="long-line"></div>
         <div class="converting-request">
             <h1>Converting request</h1>
@@ -175,15 +175,16 @@
                     </div>
                 </div>
                 <div class="from-purchased-block">
-                     <div class="block-for-button">
-                        <button><img src="img/support/Group 11.png" alt=""> Add to convertation</button>
+                    <div class="block-for-button">
+                        <button id="from-purchased-button"><img src="img/support/Group 11.png" alt=""> Add to convertation</button>
                     </div>
                 </div>
             </div>
         </div>
         <div class="long-line"></div>
-        <div class="about-contaerting">
-            <div class="about-contaerting-item">
+        <div class="about-converting">
+            <h2>Information about converting</h2>
+            <div class="about-converting-item">
                 <h3>Time</h3>
                 <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
                     Magni corporis veritatis nihil accusamus illum esse 
@@ -192,7 +193,7 @@
                     debitis nisi rerum quia?
                 </p>
             </div>
-            <div class="about-contaerting-item">
+            <div class="about-converting-item">
                 <h3>Material</h3>
                 <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
                     Magni corporis veritatis nihil accusamus illum esse 
@@ -201,7 +202,7 @@
                     debitis nisi rerum quia?
                 </p>
             </div>
-            <div class="about-contaerting-item">
+            <div class="about-converting-item">
                 <h3>Magni corporis</h3>
                 <p>Molestias quis laudantium, perspiciatis, 
                     temporibus ipsum, dicta vitae exercitationem laborum 
@@ -210,7 +211,7 @@
                     repellendus. 
                 </p>
             </div>
-            <div class="about-contaerting-item">
+            <div class="about-converting-item">
                 <h3>Molestias quis</h3>
                 <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
                     Magni corporis veritatis nihil accusamus illum esse 
@@ -221,23 +222,142 @@
             </div>
         </div>
         <div class="long-line"></div>
-        <div class="select-program">
+        <div class="select-program-form">
             <h2>Select the desired program</h2>
             <form action="">
-                <div>
-                    <select name="" id="">
-                        <option value="None">Select app</option>
-                        <option value="">First app</option>
-                        <option value="">Second app</option>
-                    </select>
+                <div class="select-app">
+                    <div class="wrapper-for-select">
+                        <span class="select-button"></span>
+                        <select name="select-app" id="select-app">
+                            <option value="None">Select app</option>
+                            <option value="first">First app</option>
+                            <option value="second">Second app</option>
+                        </select>
+                    </div>
                     <input type="text" name="version-app" id="version-app" placeholder="Versio app">
                 </div>
-                <div>
+                <div class="wrapper-for-textarea">
                     <textarea name="coments" id="coments" placeholder="Enter coments"></textarea>
+                </div>
+                <div class="price-request">
+                    <p id="price-request-title">Approximate price of the service: <span id="enter-price">120<span id="currency-value">$</span></span></p>
+                    <button id="request-button" type="submit">Request to converting</button>
                 </div>
             </form>
         </div>
-    </body>
+        <div class="purchased-item">
+            <div id="close-purchased-block" class="close-button">
+                <span></span>
+                <span></span>
+            </div>
+            <div class="input-serch-item">
+                    <h2>Select a product from the purchased</h2>
+                <form action="">
+                    <input type="search" name="serch-item" id="serch-item" placeholder="Search">
+                    <button type="submit"></button>
+                </form>
+            </div>
+            <div class="purchased-item-block">
+                <div class="item-purchased">
+                    <div class="purchase-item-img">
+                        <img src="img/slider/1.png" alt="">
+                        <div id="mouse-on" class="mouse-on">
+                            <button id="add-to-convertation" class="added-item active-button-for-select-item">Add</button>
+                            <button id="delete-from-convertation" class="delete-from-convertation">
+                                <span></span>
+                                <span></span>
+                            </button>
+                        </div>
+                        <div id="added-item-to-convertation"><span></span></div>
+                    </div>
+                    <div class="title-item-purchased">
+                            <p>Name of the unit</p>
+                    </div>
+                </div>
+                <div class="item-purchased">
+                    <div class="purchase-item-img">
+                        <img src="img/slider/1.png" alt="">
+                        <div id="mouse-on" class="mouse-on">
+                            <button id="add-to-convertation" class="added-item active-button-for-select-item">Add</button>
+                            <button id="delete-from-convertation" class="delete-from-convertation">
+                                <span></span>
+                                <span></span>
+                            </button>
+                        </div>
+                        <div id="added-item-to-convertation"><span></span></div>
+                    </div>
+                    <div class="title-item-purchased">
+                            <p>Name of the unit</p>
+                    </div>
+                </div>
+                <div class="item-purchased">
+                    <div class="purchase-item-img">
+                        <img src="img/slider/1.png" alt="">
+                        <div id="mouse-on" class="mouse-on">
+                            <button id="add-to-convertation" class="added-item active-button-for-select-item">Add</button>
+                            <button id="delete-from-convertation" class="delete-from-convertation">
+                                <span></span>
+                                <span></span>
+                            </button>
+                        </div>
+                        <div id="added-item-to-convertation"><span></span></div>
+                    </div>
+                    <div class="title-item-purchased">
+                            <p>Name of the unit</p>
+                    </div>
+                </div>
+                <div class="item-purchased">
+                    <div class="purchase-item-img">
+                        <img src="img/slider/1.png" alt="">
+                        <div id="mouse-on" class="mouse-on">
+                            <button id="add-to-convertation" class="added-item active-button-for-select-item">Add</button>
+                            <button id="delete-from-convertation" class="delete-from-convertation">
+                                <span></span>
+                                <span></span>
+                            </button>
+                        </div>
+                        <div id="added-item-to-convertation"><span></span></div>
+                    </div>
+                    <div class="title-item-purchased">
+                            <p>Name of the unit</p>
+                    </div>
+                </div>
+                <div class="item-purchased">
+                    <div class="purchase-item-img">
+                        <img src="img/slider/1.png" alt="">
+                        <div id="mouse-on" class="mouse-on">
+                            <button id="add-to-convertation" class="added-item active-button-for-select-item">Add</button>
+                            <button id="delete-from-convertation" class="delete-from-convertation">
+                                <span></span>
+                                <span></span>
+                            </button>
+                        </div>
+                        <div id="added-item-to-convertation"><span></span></div>
+                    </div>
+                    <div class="title-item-purchased">
+                            <p>Name of the unit</p>
+                    </div>
+                </div>
+                <div class="item-purchased">
+                    <div class="purchase-item-img">
+                        <img src="img/slider/1.png" alt="">
+                        <div id="mouse-on" class="mouse-on">
+                            <button id="add-to-convertation" class="added-item active-button-for-select-item">Add</button>
+                            <button id="delete-from-convertation" class="delete-from-convertation">
+                                <span></span>
+                                <span></span>
+                            </button>
+                        </div>
+                        <div id="added-item-to-convertation"><span></span></div>
+                    </div>
+                    <div class="title-item-purchased">
+                            <p>Name of the unit</p>
+                    </div>
+                </div>
+            </div>
+            <button id="add-my-elemrnt-to-converting">Add selected</button>
+        </div>
+    </main>
     <footer>
         <div class="footer-wrapper">
             <div class="main-footer">

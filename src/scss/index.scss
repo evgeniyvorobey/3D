@@ -1,4 +1,6 @@
-
+header{
+    margin-bottom: 0px !important;
+}
 @media (max-width:767px) {
     .custom-slider-item{
         display: none;
@@ -337,9 +339,6 @@
 .newly-added-description h3{
     font-weight: 100;
 }
-.added-description-toggle{
-
-}
 .bnt-first, .btn-second, .btn-third{
     border: 1px solid transparent;
     outline: none;
@@ -460,9 +459,6 @@
 
 
 @media (min-width: 768px) {
-    nav{
-        width: 753px;
-    }
     .title-search{
         background: none;
         top: -300px;
