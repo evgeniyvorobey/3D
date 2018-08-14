@@ -112,6 +112,7 @@ var deleteButton = document.getElementById('delete-from-convertation');
 
 purchasedItemBlock.onclick = function(e) {
     var addMyElemrntToConverting = document.getElementById('add-my-elemrnt-to-converting');
+
     var target = e.target; 
     if ( target.id == 'add-to-convertation' ){
         var elSrc = target.parentNode.parentNode.children[0].currentSrc;
@@ -130,14 +131,19 @@ purchasedItemBlock.onclick = function(e) {
     } else {
         return;
     }
-    for( var i = 0; i < purchasedItemBlock.children.length; i++) {
+    var sum = 0;
+    for ( var i = 0; i < purchasedItemBlock.children.length; i++) {
         if (purchasedItemBlock.children[i].id == 'add') {
-            addMyElemrntToConverting.classList.add('active-button-for-select-item');
-            return;
-        } else {
-            addMyElemrntToConverting.classList.remove('active-button-for-select-item');
-            return;
+            sum += 1;
         }
+    }
+
+    if (sum > 0) {
+        addMyElemrntToConverting.classList.add('active-button-for-select-item');
+        
+    } else {
+        addMyElemrntToConverting.classList.remove('active-button-for-select-item');
+        return;
     }
 }
 
@@ -160,7 +166,7 @@ addToConvertation.onclick = function() {
 
 var dropZone = document.getElementById('drop-zone');
 
-// Обработчики событий над областью drag
+// Обработчики событий над областью drop
 ['dragenter','dragover','dragleave','drop'].forEach(eventName => {
     dropZone.addEventListener(eventName, preventDefaults, false)
 })

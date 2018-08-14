@@ -383,10 +383,10 @@ text-transform: uppercase;
     display: block;
 }
 .purchased-item h2{
-    font-size: 20px;
+    font-size: 18px;
     color: #4b4b4b;
     text-align: center;
-    margin: 10px 0;
+    margin: 10px 0 5px 0;
 }
 .input-serch-item{
     position: absolute;
@@ -401,7 +401,7 @@ text-transform: uppercase;
 }
 .input-serch-item input{
     width: 100%;
-    height: 40px;
+    height: 30px;
     outline: none;
     border: 1px solid #D8D8D8;
     border-radius: 2px !important;
@@ -576,10 +576,10 @@ text-transform: uppercase;
 #add-my-elemrnt-to-converting{
     width: 255px;
     position: absolute;
-    bottom: 20px;
+    bottom: 10px;
     left: 50%;
     transform: translateX(-50%);
-    height: 52px;
+    height: 40px;
     font-size: 13px;
     color: #3F3A10;
     border: none;
@@ -634,6 +634,13 @@ text-transform: uppercase;
     .purchased-item h2{
         margin: 40px 0 30px;
         font-size: 24px;
+    }
+    .input-serch-item input{
+        height: 40px;
+    }
+    #add-my-elemrnt-to-converting{
+        height: 50px;
+        bottom: 20px;
     }
 }
 
