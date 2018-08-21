@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/nouislider.min.css">
     <link rel="stylesheet" href="css/goods.css">
     <link rel="stylesheet" href="css/footer.css">
     <title>Goods</title>
@@ -38,9 +39,10 @@
                     </li>
                     <li class="nav-item"><a href="aboutus.html">About</a></li>
                     <li class="nav-item"><a href="support.html">Support</a></li>
-                    <li class="nav-item"><a><img src="img/cart.png" alt="">0 items</a></li>
+                    <li id="cart" class="nav-item"><a><img src="img/cart.png" alt=""><span id="number-of-goods">0</span></a></li>
                     <li id="header-nav-log-in" class="nav-item "><a><img src="img/user.png" alt=""> Log in</a></li>
                 </ul>
+                <div class="for-mini-cart"></div>
             </div>
             <div class="bread-crumbs">
                     <ul>
@@ -146,6 +148,10 @@
                 <a href=""><img src="img/social/insta.png" alt=""></a>
             </div>
         </div>
+        <div class="modal-alert">
+            <p class="container-for-alert-title"><b>Lorem ipsum</b> dolor sit amet consectetur adipisicing elit.</p>
+            <button class="close-modal-alert"></button>
+        </div>
     </header>
     <main>
         <div class="long-line"></div>
@@ -195,17 +201,16 @@
                                 <div class="for-input-price-range">
                                     <form action="">
                                         <div class="min-price">
-                                            <input type="number" name="min-price" min="0" max="1000" step="1" id="min-price" onchange="minPriseF()">
+                                            <input type="number" name="min-price" min="0" max="1000" step="1" id="min-price">
                                         </div>
                                         <div class="max-price">
-                                            <input type="number" name="max-price" min="0" max="1000" step="1" id="max-price" onchange="maxPriseF()">
+                                            <input type="number" name="max-price" min="0" max="1000" step="1" id="max-price">
                                         </div>
                                         <button type="submit">Ok</button>
                                     </form>
                                 </div>
                                 <div class="range-price">
-                                    <input type="range" min="0" max="1000" name="price-range" id="min-price-range">
-                                    <input type="range" min="0" max="1000" name="price-range" id="max-price-range">
+                                    <div class="slider-range-container"></div>
                                 </div>
                             </div>
                         </div>
@@ -216,19 +221,19 @@
                             </div>
                             <div class="sorting-formats">
                                 <div class="formats-item">
-                                    <input added="true" type="checkbox" name="Nature" id="nature">
+                                    <input added="true" type="checkbox" name="nature" id="nature">
                                     <label for="nature">Nature</label>
                                 </div>
                                 <div class="formats-item">
-                                    <input added="true" type="checkbox" name="Carton" id="cartoon">
+                                    <input added="true" type="checkbox" name="carton" id="cartoon">
                                     <label for="cartoon">Cartoon</label>
                                 </div>
                                 <div class="formats-item">
-                                    <input added="true" type="checkbox" name="Mammal" id="mammal">
+                                    <input added="true" type="checkbox" name="mammal" id="mammal">
                                     <label for="mammal">Mammal</label>
                                 </div>
                                 <div class="formats-item">
-                                    <input added="true" type="checkbox" name="Fish" id="fish">
+                                    <input added="true" type="checkbox" name="fish" id="fish">
                                     <label for="fish">Fish</label>
                                 </div>
                             </div>
@@ -242,41 +247,41 @@
                                 <div class="sort-rating-item">
                                     <input type="checkbox" name="" id="star1">
                                     <label for="star1">
-                                        <img src="img/Star.png" alt="">
+                                        <img src="img/StarCopy.png" alt="">
                                     </label>
                                 </div>
                                 <div class="sort-rating-item">
                                     <input type="checkbox" name="" id="star2">
                                     <label for="star2">
-                                        <img src="img/Star.png" alt="">
-                                        <img src="img/Star.png" alt="">
+                                        <img src="img/StarCopy.png" alt="">
+                                        <img src="img/StarCopy.png" alt="">
                                     </label>
                                 </div>
                                 <div class="sort-rating-item">
                                     <input type="checkbox" name="" id="star3">
                                     <label for="star3">
-                                        <img src="img/Star.png" alt="">
-                                        <img src="img/Star.png" alt="">
-                                        <img src="img/Star.png" alt="">
+                                        <img src="img/StarCopy.png" alt="">
+                                        <img src="img/StarCopy.png" alt="">
+                                        <img src="img/StarCopy.png" alt="">
                                     </label>
                                 </div>
                                 <div class="sort-rating-item">
                                     <input type="checkbox" name="" id="star4">
                                     <label for="star4">
-                                        <img src="img/Star.png" alt="">
-                                        <img src="img/Star.png" alt="">
-                                        <img src="img/Star.png" alt="">
-                                        <img src="img/Star.png" alt="">
+                                        <img src="img/StarCopy.png" alt="">
+                                        <img src="img/StarCopy.png" alt="">
+                                        <img src="img/StarCopy.png" alt="">
+                                        <img src="img/StarCopy.png" alt="">
                                     </label>
                                 </div>
                                 <div class="sort-rating-item">
                                     <input type="checkbox" name="" id="star5">
                                     <label for="star5">
-                                        <img src="img/Star.png" alt="">
-                                        <img src="img/Star.png" alt="">
-                                        <img src="img/Star.png" alt="">
-                                        <img src="img/Star.png" alt="">
-                                        <img src="img/Star.png" alt="">
+                                        <img src="img/StarCopy.png" alt="">
+                                        <img src="img/StarCopy.png" alt="">
+                                        <img src="img/StarCopy.png" alt="">
+                                        <img src="img/StarCopy.png" alt="">
+                                        <img src="img/StarCopy.png" alt="">
                                     </label>
                                 </div>
                             </div>
@@ -288,20 +293,20 @@
                             </div>
                             <div class="sort-artist">
                                 <div class="artist-item">
-                                    <input added="true" type="checkbox" name="Artist name1" id="artist-id1">
+                                    <input added="true" type="checkbox" name="artist-id1" id="artist-id1">
                                     <label for="artist-id1">Artist name</label>
                                 </div>
                                 <div class="artist-item">
-                                    <input added="true" type="checkbox" name="Artist name2" id="artist-id2">
+                                    <input added="true" type="checkbox" name="artist-id2" id="artist-id2">
                                     <label for="artist-id2">Artist name</label>
                                 </div>
                                 <div class="artist-item">
-                                    <input added="true" type="checkbox" name="Artist name3" id="artist-id3">
+                                    <input added="true" type="checkbox" name="artist-id3" id="artist-id3">
                                     <label for="artist-id3">Artist name</label>
                                 </div>
                                 <div class="artist-item">
-                                    <input added="true" type="checkbox" name="Artist name4" id="artist-id">
-                                    <label for="artist-id">Artist name</label>
+                                    <input added="true" type="checkbox" name="artist-id4" id="artist-id4">
+                                    <label for="artist-id4">Artist name</label>
                                 </div>
                             </div>
                         </div>
@@ -322,24 +327,25 @@
                             <span>.pdf</span>
                             <span>.max</span>
                         </div>
+                        <div class="fond"></div>
                     </div>
                     <div class="by-goods">
                         <div class="rate">
                             <div id="reviewStars-input">
-                                <input id="star-4" type="radio" name="reviewStars"/>
-                                <label title="gorgeous" for="star-4"></label>
+                                <input id="star-4-id-001" type="radio" name="reviewStars-id-001"/>
+                                <label id="001" class="stars" title="5" for="star-4-id-001"></label>
 
-                                <input id="star-3" type="radio" name="reviewStars"/>
-                                <label title="good" for="star-3"></label>
+                                <input id="star-3-id-001" type="radio" name="reviewStars-id-001"/>
+                                <label id="001" class="stars" title="4" for="star-3-id-001"></label>
 
-                                <input id="star-2" type="radio" name="reviewStars"/>
-                                <label title="regular" for="star-2"></label>
+                                <input id="star-2-id-001" type="radio" name="reviewStars-id-001"/>
+                                <label id="001" class="stars" title="3" for="star-2-id-001"></label>
 
-                                <input id="star-1" type="radio" name="reviewStars"/>
-                                <label title="poor" for="star-1"></label>
+                                <input id="star-1-id-001" type="radio" name="reviewStars-id-001"/>
+                                <label id="001" class="stars" title="2" for="star-1-id-001"></label>
 
-                                <input id="star-0" type="radio" name="reviewStars"/>
-                                <label title="bad" for="star-0"></label>
+                                <input id="star-0-id-001" type="radio" name="reviewStars-id-001"/>
+                                <label id="001" class="stars" title="1" for="star-0-id-001"></label>
                             </div>
                             <p>Rate</p>
                         </div>
@@ -347,10 +353,10 @@
                             <img src="img/downloads.png" alt="">
                             <p id="downloads">12456</p>
                         </div>
-                        <div class="add-to-cart">
+                        <button class="add-to-cart" id="001">
                             <img src="img/addToCart.png" alt="">
                             <p id="add-to-cart">Add to cart</p>
-                        </div>
+                        </button>
                     </div>
                 </div>
                 <div class="goods-item">
@@ -367,24 +373,25 @@
                             <span>.pdf</span>
                             <span>.max</span>
                         </div>
+                        <div class="fond"></div>
                     </div>
                     <div class="by-goods">
                         <div class="rate">
                             <div id="reviewStars-input">
-                                <input id="star-4" type="radio" name="reviewStars"/>
-                                <label title="gorgeous" for="star-4"></label>
+                                <input id="star-4-id-002" type="radio" name="reviewStars-id-002"/>
+                                <label id="002" class="stars" title="5" for="star-4-id-002"></label>
 
-                                <input id="star-3" type="radio" name="reviewStars"/>
-                                <label title="good" for="star-3"></label>
+                                <input id="star-3-id-002" type="radio" name="reviewStars-id-002"/>
+                                <label id="002" class="stars" title="4" for="star-3-id-002"></label>
 
-                                <input id="star-2" type="radio" name="reviewStars"/>
-                                <label title="regular" for="star-2"></label>
+                                <input id="star-2-id-002" type="radio" name="reviewStars-id-002"/>
+                                <label id="002" class="stars" title="3" for="star-2-id-002"></label>
 
-                                <input id="star-1" type="radio" name="reviewStars"/>
-                                <label title="poor" for="star-1"></label>
+                                <input id="star-1-id-002" type="radio" name="reviewStars-id-002"/>
+                                <label id="002" class="stars" title="2" for="star-1-id-002"></label>
 
-                                <input id="star-0" type="radio" name="reviewStars"/>
-                                <label title="bad" for="star-0"></label>
+                                <input id="star-0-id-002" type="radio" name="reviewStars-id-002"/>
+                                <label id="002" class="stars" title="1" for="star-0-id-002"></label>
                             </div>
                             <p>Rate</p>
                         </div>
@@ -392,10 +399,10 @@
                             <img src="img/downloads.png" alt="">
                             <p id="downloads">12456</p>
                         </div>
-                        <div class="add-to-cart">
+                        <button class="add-to-cart" id="002">
                             <img src="img/addToCart.png" alt="">
                             <p id="add-to-cart">Add to cart</p>
-                        </div>
+                        </button>
                     </div>
                 </div>
                 <div class="goods-item">
@@ -412,11 +419,224 @@
                             <span>.pdf</span>
                             <span>.max</span>
                         </div>
+                        <div class="fond"></div>
                     </div>
                     <div class="by-goods">
-                        <div class="rate"></div>
-                        <div class="download"></div>
-                        <div class="add-to-cart"></div>
+                        <div class="rate">
+                            <div id="reviewStars-input">
+                                <input id="star-4-id-003" type="radio" name="reviewStars-id-003"/>
+                                <label id="003" class="stars" title="5" for="star-4-id-003"></label>
+
+                                <input id="star-3-id-003" type="radio" name="reviewStars-id-003"/>
+                                <label id="003" class="stars" title="4" for="star-3-id-003"></label>
+
+                                <input id="star-2-id-003" type="radio" name="reviewStars-id-003"/>
+                                <label id="003" class="stars" title="3" for="star-2-id-003"></label>
+
+                                <input id="star-1-id-003" type="radio" name="reviewStars-id-003"/>
+                                <label id="002" class="stars" title="2" for="star-1-id-002"></label>
+
+                                <input id="star-0-id-003" type="radio" name="reviewStars-id-003"/>
+                                <label id="003" class="stars" title="1" for="star-0-id-003"></label>
+                            </div>
+                            <p>Rate</p>
+                        </div>
+                        <div class="download">
+                            <img src="img/downloads.png" alt="">
+                            <p id="downloads">12456</p>
+                        </div>
+                        <button class="add-to-cart" id="003">
+                            <img src="img/addToCart.png" alt="">
+                            <p id="add-to-cart">Add to cart</p>
+                        </button>
+                    </div>
+
+                </div>
+                <div class="goods-item">
+                    <div class=goods-image>
+                        <a href=""> <img src="img/slider/5.png" alt=""></a>
+                    </div>
+                    <div class="item-info">
+                        <div class="goods-price">
+                            <span class="goods-price-value">148.00</span>
+                            <span class="goods-price-currency">$</span>
+                        </div>
+                        <div class="goods-format">
+                            <span>.obg</span>
+                            <span>.pdf</span>
+                            <span>.max</span>
+                        </div>
+                        <div class="fond"></div>
+                    </div>
+                    <div class="by-goods">
+                        <div class="rate">
+                            <div id="reviewStars-input">
+                                <input id="star-4-id-004" type="radio" name="reviewStars-id-004"/>
+                                <label id="004" class="stars" title="5" for="star-4-id-004"></label>
+
+                                <input id="star-3-id-002" type="radio" name="reviewStars-id-004"/>
+                                <label id="004" class="stars" title="4" for="star-3-id-004"></label>
+
+                                <input id="star-2-id-004" type="radio" name="reviewStars-id-004"/>
+                                <label id="004" class="stars" title="3" for="star-2-id-004"></label>
+
+                                <input id="star-1-id-004" type="radio" name="reviewStars-id-004"/>
+                                <label id="004" class="stars" title="2" for="star-1-id-004"></label>
+
+                                <input id="star-0-id-004" type="radio" name="reviewStars-id-004"/>
+                                <label id="004" class="stars" title="1" for="star-0-id-004"></label>
+                            </div>
+                            <p>Rate</p>
+                        </div>
+                        <div class="download">
+                            <img src="img/downloads.png" alt="">
+                            <p id="downloads">12456</p>
+                        </div>
+                        <button class="add-to-cart" id="004">
+                            <img src="img/addToCart.png" alt="">
+                            <p id="add-to-cart">Add to cart</p>
+                        </button>
+                    </div>
+
+                </div>
+                <div class="goods-item">
+                    <div class=goods-image>
+                        <a href=""> <img src="img/slider/5.png" alt=""></a>
+                    </div>
+                    <div class="item-info">
+                        <div class="goods-price">
+                            <span class="goods-price-value">148.00</span>
+                            <span class="goods-price-currency">$</span>
+                        </div>
+                        <div class="goods-format">
+                            <span>.obg</span>
+                            <span>.pdf</span>
+                            <span>.max</span>
+                        </div>
+                        <div class="fond"></div>
+                    </div>
+                    <div class="by-goods">
+                        <div class="rate">
+                            <div id="reviewStars-input">
+                                <input id="star-4-id-005" type="radio" name="reviewStars-id-005"/>
+                                <label id="005" class="stars" title="5" for="star-4-id-005"></label>
+
+                                <input id="star-3-id-005" type="radio" name="reviewStars-id-005"/>
+                                <label id="005" class="stars" title="4" for="star-3-id-005"></label>
+
+                                <input id="star-2-id-005" type="radio" name="reviewStars-id-005"/>
+                                <label id="005" class="stars" title="3" for="star-2-id-005"></label>
+
+                                <input id="star-1-id-005" type="radio" name="reviewStars-id-005"/>
+                                <label id="005" class="stars" title="2" for="star-1-id-005"></label>
+
+                                <input id="star-0-id-005" type="radio" name="reviewStars-id-005"/>
+                                <label id="005" class="stars" title="1" for="star-0-id-005"></label>
+                            </div>
+                            <p>Rate</p>
+                        </div>
+                        <div class="download">
+                            <img src="img/downloads.png" alt="">
+                            <p id="downloads">12456</p>
+                        </div>
+                        <button class="add-to-cart" id="005">
+                            <img src="img/addToCart.png" alt="">
+                            <p id="add-to-cart">Add to cart</p>
+                        </button>
+                    </div>
+
+                </div>
+                <div class="goods-item">
+                    <div class=goods-image>
+                        <a href=""> <img src="img/slider/5.png" alt=""></a>
+                    </div>
+                    <div class="item-info">
+                        <div class="goods-price">
+                            <span class="goods-price-value">148.00</span>
+                            <span class="goods-price-currency">$</span>
+                        </div>
+                        <div class="goods-format">
+                            <span>.obg</span>
+                            <span>.pdf</span>
+                            <span>.max</span>
+                        </div>
+                        <div class="fond"></div>
+                    </div>
+                    <div class="by-goods">
+                        <div class="rate">
+                            <div id="reviewStars-input">
+                                <input id="star-4-id-006" type="radio" name="reviewStars-id-006"/>
+                                <label id="006" class="stars" title="5" for="star-4-id-006"></label>
+
+                                <input id="star-3-id-006" type="radio" name="reviewStars-id-006"/>
+                                <label id="006" class="stars" title="4" for="star-3-id-006"></label>
+
+                                <input id="star-2-id-006" type="radio" name="reviewStars-id-006"/>
+                                <label id="006" class="stars" title="3" for="star-2-id-006"></label>
+
+                                <input id="star-1-id-006" type="radio" name="reviewStars-id-006"/>
+                                <label id="006" class="stars" title="2" for="star-1-id-006"></label>
+
+                                <input id="star-0-id-006" type="radio" name="reviewStars-id-006"/>
+                                <label id="006" class="stars" title="1" for="star-0-id-006"></label>
+                            </div>
+                            <p>Rate</p>
+                        </div>
+                        <div class="download">
+                            <img src="img/downloads.png" alt="">
+                            <p id="downloads">12456</p>
+                        </div>
+                        <button class="add-to-cart" id="006">
+                            <img src="img/addToCart.png" alt="">
+                            <p id="add-to-cart">Add to cart</p>
+                        </button>
+                    </div>
+
+                </div>
+                <div class="goods-item">
+                    <div class=goods-image>
+                        <a href=""> <img src="img/slider/5.png" alt=""></a>
+                    </div>
+                    <div class="item-info">
+                        <div class="goods-price">
+                            <span class="goods-price-value">148.00</span>
+                            <span class="goods-price-currency">$</span>
+                        </div>
+                        <div class="goods-format">
+                            <span>.obg</span>
+                            <span>.pdf</span>
+                            <span>.max</span>
+                        </div>
+                        <div class="fond"></div>
+                    </div>
+                    <div class="by-goods">
+                        <div class="rate">
+                            <div id="reviewStars-input">
+                                <input id="star-4-id-007" type="radio" name="reviewStars-id-007"/>
+                                <label id="007" class="stars" title="5" for="star-4-id-007"></label>
+
+                                <input id="star-3-id-007" type="radio" name="reviewStars-id-007"/>
+                                <label id="007" class="stars" title="4" for="star-3-id-007"></label>
+
+                                <input id="star-2-id-007" type="radio" name="reviewStars-id-007"/>
+                                <label id="007" class="stars" title="3" for="star-2-id-007"></label>
+
+                                <input id="star-1-id-007" type="radio" name="reviewStars-id-007"/>
+                                <label id="007" class="stars" title="2" for="star-1-id-007"></label>
+
+                                <input id="star-0-id-007" type="radio" name="reviewStars-id-007"/>
+                                <label id="007" class="stars" title="1" for="star-0-id-007"></label>
+                            </div>
+                            <p>Rate</p>
+                        </div>
+                        <div class="download">
+                            <img src="img/downloads.png" alt="">
+                            <p id="downloads">12456</p>
+                        </div>
+                        <button class="add-to-cart" id="007">
+                            <img src="img/addToCart.png" alt="">
+                            <p id="add-to-cart">Add to cart</p>
+                        </button>
                     </div>
                 </div>
                 <div class="goods-item">
@@ -433,11 +653,36 @@
                             <span>.pdf</span>
                             <span>.max</span>
                         </div>
+                        <div class="fond"></div>
                     </div>
                     <div class="by-goods">
-                        <div class="rate"></div>
-                        <div class="download"></div>
-                        <div class="add-to-cart"></div>
+                        <div class="rate">
+                            <div id="reviewStars-input">
+                                <input id="star-4-id-008" type="radio" name="reviewStars-id-008"/>
+                                <label id="008" class="stars" title="5" for="star-4-id-008"></label>
+
+                                <input id="star-3-id-008" type="radio" name="reviewStars-id-008"/>
+                                <label id="008" class="stars" title="4" for="star-3-id-008"></label>
+
+                                <input id="star-2-id-008" type="radio" name="reviewStars-id-008"/>
+                                <label id="008" class="stars" title="3" for="star-2-id-008"></label>
+
+                                <input id="star-1-id-008" type="radio" name="reviewStars-id-008"/>
+                                <label id="008" class="stars" title="2" for="star-1-id-008"></label>
+
+                                <input id="star-0-id-008" type="radio" name="reviewStars-id-008"/>
+                                <label id="008" class="stars" title="1" for="star-0-id-008"></label>
+                            </div>
+                            <p>Rate</p>
+                        </div>
+                        <div class="download">
+                            <img src="img/downloads.png" alt="">
+                            <p id="downloads">12456</p>
+                        </div>
+                        <button class="add-to-cart" id="008">
+                            <img src="img/addToCart.png" alt="">
+                            <p id="add-to-cart">Add to cart</p>
+                        </button>
                     </div>
                 </div>
                 <div class="goods-item">
@@ -454,11 +699,36 @@
                             <span>.pdf</span>
                             <span>.max</span>
                         </div>
+                        <div class="fond"></div>
                     </div>
                     <div class="by-goods">
-                        <div class="rate"></div>
-                        <div class="download"></div>
-                        <div class="add-to-cart"></div>
+                        <div class="rate">
+                            <div id="reviewStars-input">
+                                <input id="star-4-id-009" type="radio" name="reviewStars-id-009"/>
+                                <label id="009" class="stars" title="5" for="star-4-id-009"></label>
+
+                                <input id="star-3-id-009" type="radio" name="reviewStars-id-009"/>
+                                <label id="009" class="stars" title="4" for="star-3-id-009"></label>
+
+                                <input id="star-2-id-009" type="radio" name="reviewStars-id-009"/>
+                                <label id="009" class="stars" title="3" for="star-2-id-009"></label>
+
+                                <input id="star-1-id-009" type="radio" name="reviewStars-id-009"/>
+                                <label id="009" class="stars" title="2" for="star-1-id-002"></label>
+
+                                <input id="star-0-id-009" type="radio" name="reviewStars-id-009"/>
+                                <label id="009" class="stars" title="1" for="star-0-id-009"></label>
+                            </div>
+                            <p>Rate</p>
+                        </div>
+                        <div class="download">
+                            <img src="img/downloads.png" alt="">
+                            <p id="downloads">12456</p>
+                        </div>
+                        <button class="add-to-cart" id="009">
+                            <img src="img/addToCart.png" alt="">
+                            <p id="add-to-cart">Add to cart</p>
+                        </button>
                     </div>
                 </div>
                 <div class="goods-item">
@@ -475,11 +745,36 @@
                             <span>.pdf</span>
                             <span>.max</span>
                         </div>
+                        <div class="fond"></div>
                     </div>
                     <div class="by-goods">
-                        <div class="rate"></div>
-                        <div class="download"></div>
-                        <div class="add-to-cart"></div>
+                        <div class="rate">
+                            <div id="reviewStars-input">
+                                <input id="star-4-id-010" type="radio" name="reviewStars-id-010"/>
+                                <label id="010" class="stars" title="5" for="star-4-id-010"></label>
+
+                                <input id="star-3-id-010" type="radio" name="reviewStars-id-010"/>
+                                <label id="010" class="stars" title="4" for="star-3-id-010"></label>
+
+                                <input id="star-2-id-010" type="radio" name="reviewStars-id-010"/>
+                                <label id="010" class="stars" title="3" for="star-2-id-010"></label>
+
+                                <input id="star-1-id-010" type="radio" name="reviewStars-id-010"/>
+                                <label id="010" class="stars" title="2" for="star-1-id-002"></label>
+
+                                <input id="star-0-id-010" type="radio" name="reviewStars-id-010"/>
+                                <label id="010" class="stars" title="1" for="star-0-id-010"></label>
+                            </div>
+                            <p>Rate</p>
+                        </div>
+                        <div class="download">
+                            <img src="img/downloads.png" alt="">
+                            <p id="downloads">12456</p>
+                        </div>
+                        <button class="add-to-cart" id="010">
+                            <img src="img/addToCart.png" alt="">
+                            <p id="add-to-cart">Add to cart</p>
+                        </button>
                     </div>
                 </div>
                 <div class="goods-item">
@@ -496,95 +791,36 @@
                             <span>.pdf</span>
                             <span>.max</span>
                         </div>
+                        <div class="fond"></div>
                     </div>
                     <div class="by-goods">
-                        <div class="rate"></div>
-                        <div class="download"></div>
-                        <div class="add-to-cart"></div>
-                    </div>
-                </div>
-                <div class="goods-item">
-                    <div class=goods-image>
-                        <a href=""> <img src="img/slider/5.png" alt=""></a>
-                    </div>
-                    <div class="item-info">
-                        <div class="goods-price">
-                            <span class="goods-price-value">148.00</span>
-                            <span class="goods-price-currency">$</span>
+                        <div class="rate">
+                            <div id="reviewStars-input">
+                                <input id="star-4-id-011" type="radio" name="reviewStars-id-011"/>
+                                <label id="011" class="stars" title="5" for="star-4-id-011"></label>
+
+                                <input id="star-3-id-011" type="radio" name="reviewStars-id-011"/>
+                                <label id="011" class="stars" title="4" for="star-3-id-011"></label>
+
+                                <input id="star-2-id-011" type="radio" name="reviewStars-id-011"/>
+                                <label id="011" class="stars" title="3" for="star-2-id-011"></label>
+
+                                <input id="star-1-id-011" type="radio" name="reviewStars-id-011"/>
+                                <label id="011" class="stars" title="2" for="star-1-id-002"></label>
+
+                                <input id="star-0-id-011" type="radio" name="reviewStars-id-011"/>
+                                <label id="011" class="stars" title="1" for="star-0-id-011"></label>
+                            </div>
+                            <p>Rate</p>
                         </div>
-                        <div class="goods-format">
-                            <span>.obg</span>
-                            <span>.pdf</span>
-                            <span>.max</span>
+                        <div class="download">
+                            <img src="img/downloads.png" alt="">
+                            <p id="downloads">12456</p>
                         </div>
-                    </div>
-                    <div class="by-goods">
-                        <div class="rate"></div>
-                        <div class="download"></div>
-                        <div class="add-to-cart"></div>
-                    </div>
-                </div>
-                <div class="goods-item">
-                    <div class=goods-image>
-                        <a href=""> <img src="img/slider/5.png" alt=""></a>
-                    </div>
-                    <div class="item-info">
-                        <div class="goods-price">
-                            <span class="goods-price-value">148.00</span>
-                            <span class="goods-price-currency">$</span>
-                        </div>
-                        <div class="goods-format">
-                            <span>.obg</span>
-                            <span>.pdf</span>
-                            <span>.max</span>
-                        </div>
-                    </div>
-                    <div class="by-goods">
-                        <div class="rate"></div>
-                        <div class="download"></div>
-                        <div class="add-to-cart"></div>
-                    </div>
-                </div>
-                <div class="goods-item">
-                    <div class=goods-image>
-                        <a href=""> <img src="img/slider/5.png" alt=""></a>
-                    </div>
-                    <div class="item-info">
-                        <div class="goods-price">
-                            <span class="goods-price-value">148.00</span>
-                            <span class="goods-price-currency">$</span>
-                        </div>
-                        <div class="goods-format">
-                            <span>.obg</span>
-                            <span>.pdf</span>
-                            <span>.max</span>
-                        </div>
-                    </div>
-                    <div class="by-goods">
-                        <div class="rate"></div>
-                        <div class="download"></div>
-                        <div class="add-to-cart"></div>
-                    </div>
-                </div>
-                <div class="goods-item">
-                    <div class=goods-image>
-                        <a href=""> <img src="img/slider/5.png" alt=""></a>
-                    </div>
-                    <div class="item-info">
-                        <div class="goods-price">
-                            <span class="goods-price-value">148.00</span>
-                            <span class="goods-price-currency">$</span>
-                        </div>
-                        <div class="goods-format">
-                            <span>.obg</span>
-                            <span>.pdf</span>
-                            <span>.max</span>
-                        </div>
-                    </div>
-                    <div class="by-goods">
-                        <div class="rate"></div>
-                        <div class="download"></div>
-                        <div class="add-to-cart"></div>
+                        <button class="add-to-cart" id="011">
+                            <img src="img/addToCart.png" alt="">
+                            <p id="add-to-cart">Add to cart</p>
+                        </button>
                     </div>
                 </div>
                 <div id="show-more-goods" class="goods-item">
@@ -681,6 +917,7 @@
         </div>
     </footer>
     <script src="js/header.js"></script>
+    <script src="js/nouislider.min.js"></script>
     <script src="js/goods.js"></script>
 
 </body>

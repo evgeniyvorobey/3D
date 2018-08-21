@@ -1,0 +1,54 @@
+{
+    "001" : {
+        "name" : "Boat",
+        "cost" : "236.00",
+        "license" : {
+            "standart" : "236,00",
+            "Expanded" : "260.00"
+        },
+        "currency" : "$",
+        "format" : ".obg",
+        "description" : "Description Boat",
+        "image" : "img/slider/1.png"
+    },
+    "002" : {
+        "name" : "Meet",
+        "cost" : "146.00",
+        "currency" : "$",
+        "format" : ".obg",
+        "description" : "Description Meet",
+        "image" : "img/slider/4.png"
+    },
+    "003" : {
+        "name" : "Car",
+        "cost" : "276.00",
+        "currency" : "$",
+        "format" : ".obg",
+        "description" : "Description Car",
+        "image" : "img/slider/2.png"
+    },
+    "004" : {
+        "name" : "Phone",
+        "cost" : "245.00",
+        "currency" : "$",
+        "format" : ".obg",
+        "description" : "Description Phone",
+        "image" : "img/slider/5.png"
+    },
+    "005" : {
+        "name" : "TV",
+        "cost" : "846.00",
+        "currency" : "$",
+        "format" : ".obg",
+        "description" : "Description TV",
+        "image" : "img/slider/5.png"
+    },
+    "006" : {
+        "name" : "Computer",
+        "cost" : "766.00",
+        "currency" : "$",
+        "format" : ".obg",
+        "description" : "Description Computer",
+        "image" : "img/slider/5.png"
+    }
+}

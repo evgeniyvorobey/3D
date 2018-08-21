@@ -178,3 +178,178 @@ function setImgSize() {
 }
 
 
+
+//----------------------------Корзина
+var cart = {};
+
+var goodsArr = {};
+
+//------Получаем масив товаров
+fetch('goods.json')
+    .then(
+        function(response) {
+            response.json()
+            .then( function(data) {
+                goodsArr = data;
+            })
+        }
+    )
+
+//---Добавление товара в корзину
+function addToCart() {
+    if ( target.classList.contains('add-to-cart')) {
+        var idGoods = target.id;
+        if ( cart[idGoods] != undefined)  {
+            alert('This goods currently added')
+        } else {
+            cart[idGoods] = 1
+        }
+    }
+    localStorage.setItem('cart', JSON.stringify(cart))
+    numberOfGoods();
+}
+
+//------Проверка есть ли товары в localStorage если да то записываем их в масив
+function checkCart() {
+    if ( localStorage.getItem('cart') != null ){
+        cart = JSON.parse(localStorage.getItem("cart"))
+    }
+}
+//-----Ставим оценку товару
+function setRateGoods() {
+    if ( target.classList.contains('stars')) {
+        console.log(`Item id ${target.id} = ${target.title} stars`)
+    }
+}
+
+
+var GoodsInCart = document.getElementById('number-of-goods');
+
+function numberOfGoods() {
+    cartItem = 0;
+    for (let i in cart){
+        cartItem += cart[i];
+    }
+    GoodsInCart.innerHTML = cartItem;
+}
+
+window.onload = function() {
+    checkCart();
+    numberOfGoods();
+    modalAlertActive();
+}
+
+var allprice = 0;
+var cartButton = document.getElementById('cart');
+var forMiniCart = document.getElementsByClassName('for-mini-cart')[0];
+var miniCart = document.getElementsByClassName('mini-cart');
+var miniCartEmpty = document.getElementsByClassName('mini-cart-empty');
+
+cartButton.onclick = function() {
+    if ( document.body.offsetWidth < 768 ) {
+        return;
+    } else {
+        if ( forMiniCart.children.length == 0 ){
+            showMiniCart()
+        } else {
+            if ( miniCart[0] != undefined ){
+                miniCart[0].remove();
+                allprice = 0;
+            } else {
+                miniCartEmpty[0].remove();
+            }
+    
+        }
+    }
+}
+
+function allItemCost() {
+    for ( var key in cart) {
+        allprice += goodsArr[key].cost * cart[key];
+    }
+}
+
+
+function showMiniCart() {
+    allItemCost();
+    var out = '';
+    if ( cartItem == 0 ){
+        out += `<div class="mini-cart-empty"><p>Cart is empty</p></div>`
+    } else {
+        out += `<div class="mini-cart">`;
+        
+            out += `<div class="mini-cart-top">`;
+                out += `<div class="top-button"></div>`;
+                out += `<div class="mini-cart-wrapper">`;
+                    out += `<div class="mini-cart-item-container">`;
+                    for (var key in cart ) {
+                        out += `<div class="mini-cart-main">`;
+                        out += `<div class="mini-cart-item-img"><img src="${goodsArr[key].image}" alt=""></div>`;
+                        out += `<div class="mini-cart-item-info"><p>${goodsArr[key].name}</p><div class="mini-cart-one-item-price"><p>${goodsArr[key].cost}</p><span>${goodsArr[key].currency}</span></div></div>`;
+                        out += `</div>`;
+                    }
+                    out += `</div>`
+                out += `</div>`
+                out += `<div class="bottom-button"></div>`;
+            out += `</div>`;
+            out += `<div class="mini-cart-price">`;
+                out += `<div class="mini-cart-all-price"><p>${cartItem}</p><p>${allprice}.00</p></div>`;
+                out += `<button><img src="img/cartYellow.png">Checkout</button>`
+            out += `</div>`
+
+        out += `</div>`;
+    }
+    forMiniCart.innerHTML += out;
+}
+
+var forMinCart = document.getElementsByClassName('for-mini-cart')[0];
+var miniCartItemContainer = document.getElementsByClassName('mini-cart-item-container');
+
+forMinCart.onclick = event => {
+    var target = event.target;
+    var position = getComputedStyle(miniCartItemContainer[0]).transform.split(',');
+
+    var widthContainer = miniCartItemContainer[0].offsetHeight;
+    position = parseInt(position[5]);
+
+        if (position < 0){
+            position = position;
+        } else {
+            position = 0;
+        }
+
+// перелистывание вниз
+    if ( target.classList.contains('bottom-button')) {
+        if ((-widthContainer + 121) !== position) {
+            miniCartItemContainer[0].style.transform = `translateY(${position -121}px)`;
+        } else {
+            return;
+        }
+    }
+
+    // перелистывание вверх
+    if ( target.classList.contains('top-button')) {
+        if (position !== 0) {
+            miniCartItemContainer[0].style.transform = `translateY(${position +121}px)`;
+        }
+    }
+
+}
+
+// Модальное окно/алерт
+
+var modalAlert = document.getElementsByClassName('modal-alert')[0];
+var closeModalAlert = document.getElementsByClassName('close-modal-alert')[0];
+
+function modalAlertActive() {
+    if ( modalAlert.classList.contains('modal-alert-active')){
+        shadeOn();
+    }
+}
+closeModalAlert.onclick = () => { deleteModalAlert() }
+
+
+function deleteModalAlert() {
+    shadeOff();
+    modalAlert.classList.remove('modal-alert-active');
+}
