@@ -1,5 +1,6 @@
 input{
     padding: 0 0 0 20px;
+    outline: none;
 }
 body{
     font-family: 'Open Sans', sans-serif;
@@ -540,6 +541,7 @@ a{
 }
 .bread-crumbs ul{
     height: 70px;
+    padding: 0 0 0 10px;
     display: flex;
     flex-direction: row;
     align-items: center;

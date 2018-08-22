@@ -3,8 +3,8 @@
         "name" : "Boat",
         "cost" : "236.00",
         "license" : {
-            "standart" : "236,00",
-            "Expanded" : "260.00"
+            "Extendet license" : "236,00",
+            "Expanded license" : "260.00"
         },
         "currency" : "$",
         "format" : ".obg",
@@ -14,6 +14,10 @@
     "002" : {
         "name" : "Meet",
         "cost" : "146.00",
+        "license" : {
+            "Extendet license" : "146,00",
+            "Expanded license" : "210.00"
+        },
         "currency" : "$",
         "format" : ".obg",
         "description" : "Description Meet",
@@ -22,6 +26,10 @@
     "003" : {
         "name" : "Car",
         "cost" : "276.00",
+        "license" : {
+            "Extendet license" : "276,00",
+            "Expanded license" : "360.00"
+        },
         "currency" : "$",
         "format" : ".obg",
         "description" : "Description Car",
@@ -30,6 +38,10 @@
     "004" : {
         "name" : "Phone",
         "cost" : "245.00",
+                "license" : {
+            "Extendet license" : "245,00",
+            "Expanded license" : "315.00"
+        },
         "currency" : "$",
         "format" : ".obg",
         "description" : "Description Phone",
@@ -38,6 +50,10 @@
     "005" : {
         "name" : "TV",
         "cost" : "846.00",
+                "license" : {
+            "Extendet license" : "846,00",
+            "Expanded license" : "1000.00"
+        },
         "currency" : "$",
         "format" : ".obg",
         "description" : "Description TV",
@@ -46,6 +62,10 @@
     "006" : {
         "name" : "Computer",
         "cost" : "766.00",
+                "license" : {
+            "Extendet license" : "766,00",
+            "Expanded license" : "999.00"
+        },
         "currency" : "$",
         "format" : ".obg",
         "description" : "Description Computer",

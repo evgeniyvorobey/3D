@@ -128,13 +128,13 @@ var categoryItem = document.getElementsByClassName('category-item');
 // document.addEventListener('DOMContentLoaded', function() {
 //     $.get( "/site/get-categories", function( data ) {
 //         console.log( data );
-//         var categories = "";
 //         var out = '';
 //     for (var key in data){
 //         out += `<div class="category-item">`;
 //         out += `<a href="">`;
 //         out += `<div>`;
 //         out += `<img src="${data[key].image}" alt="${data[key].title}">`;
+
 //         out += `<p>${data[key].title}</p>`;
 //         out += `</div>`;
 //         out += `</a>`;
@@ -144,8 +144,8 @@ var categoryItem = document.getElementsByClassName('category-item');
 //     if ( categoryBlock !== undefined ) {
 //         categoryBlock.innerHTML = out;
 //     }
-//     setImgSize();
 //     })
+//     setImgSize();
 // })
 
 
@@ -166,7 +166,6 @@ models.onclick = function() {
 
 
 
-setImgSize();
 
 function setImgSize() {
     for (var i = 0; i < categoryItem.length; i++) {
@@ -205,7 +204,7 @@ function addToCart() {
             cart[idGoods] = 1
         }
     }
-    localStorage.setItem('cart', JSON.stringify(cart))
+    saveCartToLS();
     numberOfGoods();
 }
 
@@ -214,13 +213,13 @@ function checkCart() {
     if ( localStorage.getItem('cart') != null ){
         cart = JSON.parse(localStorage.getItem("cart"))
     }
+    console.log(cart)
 }
-//-----Ставим оценку товару
-function setRateGoods() {
-    if ( target.classList.contains('stars')) {
-        console.log(`Item id ${target.id} = ${target.title} stars`)
-    }
+function saveCartToLS() {
+    // Сохраняю корзину в localStorage
+    localStorage.setItem('cart', JSON.stringify(cart));
 }
+
 
 
 var GoodsInCart = document.getElementById('number-of-goods');
@@ -234,9 +233,14 @@ function numberOfGoods() {
 }
 
 window.onload = function() {
+    setImgSize();
     checkCart();
     numberOfGoods();
     modalAlertActive();
+    if ( document.title == 'Cart'){
+        renderItemsInCart();
+    }
+    console.log(document.title)
 }
 
 var allprice = 0;
@@ -265,7 +269,7 @@ cartButton.onclick = function() {
 
 function allItemCost() {
     for ( var key in cart) {
-        allprice += goodsArr[key].cost * cart[key];
+        allprice += goodsArr[key].cost
     }
 }
 

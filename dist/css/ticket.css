@@ -1,5 +1,8 @@
 .wrapper {
 	margin: 50px auto;
+	padding: 0 10px;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 .wrapper h1 {

@@ -150,8 +150,9 @@
 
 
 .history-line{
-    width: 95%;
-    margin: 0 auto;
+    width: 100%;
+    margin: 5px;
+    box-sizing: border-box;
 }
 .history-item{
     display: flex;
@@ -251,6 +252,7 @@
     height: 200px;
     background: linear-gradient(to bottom, rgba(161,173,183,1) 50%, rgba(161,173,183,1) 17%, rgba(117,133,146,1) 100%);
     margin: 5px;
+    overflow: hidden;
 }
 .team-item img{
     position: absolute;

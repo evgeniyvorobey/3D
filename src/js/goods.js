@@ -5,18 +5,8 @@ var selectedItem = document.getElementById('selected-item');
 var priceRange = document.getElementById('price-range');
 
 
-curentRating.onclick = function() {
-    dropDownCategory.classList.toggle('on-dropDown');
-}
 
-dropDownCategory.onclick = function(e) {
-    var target = e.target;
-    if ( target.id == 'rating-categoryes-item' ) {
-        selectedItem.innerHTML= target.innerText;
-    } else{
-        return;
-    }
-}
+
 
 // --------------------Input Range
 var minPrice = document.getElementById('min-price');
@@ -154,8 +144,8 @@ wrapperForGoods.onclick =  event => {
         curentEl.classList.toggle('by-goods-visible')
     }
 
-    //-------Оценка
-    setRateGoods();
+    // //-------Оценка
+    // setRateGoods();
 
     //---Добавление в корзину
     checkCart();

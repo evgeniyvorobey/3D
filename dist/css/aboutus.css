@@ -1,5 +1,6 @@
 input {
 	padding: 0 0 0 20px;
+	outline: none;
 }
 
 body {
@@ -759,6 +760,7 @@ a {
 
 .bread-crumbs ul {
 	height: 70px;
+	padding: 0 0 0 10px;
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
@@ -1371,8 +1373,10 @@ a {
 }
 
 .history-line {
-	width: 95%;
-	margin: 0 auto;
+	width: 100%;
+	margin: 5px;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 .history-item {
@@ -1504,6 +1508,7 @@ a {
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #a1adb7), color-stop(17%, #a1adb7), to(#758592));
 	background: linear-gradient(to bottom, #a1adb7 50%, #a1adb7 17%, #758592 100%);
 	margin: 5px;
+	overflow: hidden;
 }
 
 .team-item img {

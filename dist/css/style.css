@@ -1,5 +1,6 @@
 input {
 	padding: 0 0 0 20px;
+	outline: none;
 }
 
 body {
@@ -759,6 +760,7 @@ a {
 
 .bread-crumbs ul {
 	height: 70px;
+	padding: 0 0 0 10px;
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
@@ -1589,6 +1591,7 @@ header {
 }
 
 .newly-added-description {
+	margin: 0 10px;
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;

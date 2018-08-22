@@ -1,0 +1,358 @@
+main{
+    min-height: 50vh;
+    margin: 50px 0;
+}
+h1{
+    font-size: 27px;
+    color: #4B4B4B;
+    font-weight: 400;
+    padding: 0 0 0 10px;
+    box-sizing: border-box;
+}
+.wrapper-for-purchases{
+    background: #FFFFFF;
+    box-shadow: 0 7px 20px 0 rgba(0,0,0,0.06);
+    border-radius: 2px;
+    padding: 0 0 20px 0;
+    margin: 50px 10px;
+}
+.purchased-item{
+    display: flex;
+    align-items: center;
+    max-height: 150px;
+    margin: 10px;
+    padding: 15px 0px;
+    border-bottom: 1px solid #EDEDED;
+    box-sizing: border-box;
+}
+.purchased-item:last-child{
+    border-bottom: none;
+}
+.purchased-item-image{
+    width: 20%;
+}
+.purchased-item-image a{
+    width: 100%;
+    height: 100%;
+}
+.purchased-item-image img{
+    width: 100%;
+    max-width: 100px;
+    max-height: 100px;
+}
+.about-purchased-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+}
+.about-purchased-item p{
+    margin: 0 0 10px 0;
+    font-size: 14px;
+    color: #4B4B4B;
+}
+.wrapper-for-license{
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    width: 130px;
+    height: 35px;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 13px;
+    color: #4B4B4B;
+    border: 1px solid #EDEDED;
+    box-sizing: border-box;
+}
+.wrapper-for-license-transparent{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+}
+.arrow-down{
+    width: 8px;
+    height: 8px;
+    margin: 0 0 3px 3px;
+    border-left: 1px solid #C9C9C9;
+    border-bottom: 1px solid #C9C9C9;
+    transform: rotate(-45deg);
+    transition: .1s ease-in-out;
+}
+.arrow-up{
+    margin: 0 0 -3px 3px;
+    transform: rotate(-225deg);
+}
+
+.purchased-item-license{
+    position: absolute;
+    display: none;
+    left: -1px;
+    bottom: -59px;
+    height: 57px;
+    width:100%;
+    border: 1px solid #EDEDED;
+    box-sizing: content-box;
+    background: #fff;
+}
+.purchased-item-license-active{
+    display: block;
+}
+.purchased-item-license li{
+    padding: 5px 0;
+    padding: 7px 0 7px 5px;
+    border-bottom: 1px solid #EDEDED;
+    box-sizing: border-box;
+    transition: .1s ease-in-out;
+}
+.purchased-item-license li:hover{
+    color: rgb(160, 160, 160);
+}
+.purchased-item-price{
+    width: 25%;
+    font-size: 18px;
+    font-weight: bold;
+}
+.purchased-item-price span{
+    display: flex;
+}
+.purchased-item-currency{
+    font-size: 11px;
+}
+.delete-item-from-cart{
+    position: relative;
+    width: 16px;
+    height: 16px;
+    padding: 0;
+    margin: 0;
+    border: none;
+    background: transparent;
+    outline: none;
+    cursor: pointer;
+}
+.delete-item-from-cart:before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background: #949494;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+.delete-item-from-cart::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background: #949494;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+.total-price-discount{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0 10px;
+    margin: 50px auto;
+}
+.discount{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.discount input{
+    width: 47%;
+    height: 33px;
+    border: 1px solid #EDEDED;
+    font-size: 14px;
+    border-radius: 1px;
+    box-sizing: border-box;
+    outline: none;
+    transition: .1s ease-in-out;
+}
+.discount input.discont-active{
+    border: 1px dashed #EDEDED;
+}
+.discount input::placeholder{
+    font-size: 14px;
+    color: #adadad;
+}
+.discount input:hover{
+    box-shadow: 0px 0px 14px -7px;
+}
+.discount input:focus{
+    box-shadow: 0px 0px 17px -7px;
+}
+.discount button{
+    width: 47%;
+    max-width: 223px;
+    height: 33px;
+    border: 1px solid #EDEDED;
+    border-radius: 30px;
+    background: #fff;
+    box-sizing: border-box;
+    outline: none;
+    color: #4B4B4B;
+    font-size: 14px;
+    font-weight: 500;
+    transition: .1s ease-in-out;
+}
+.discount button:hover{
+    box-shadow: 0px 0px 15px -7px;
+}
+.wrapper-total-price{
+    margin: 20px 0 0 0;
+    width: 60%;
+    display: flex;
+    justify-content: space-around;
+}
+.total-price-title{
+    font-size: 18px;
+    color: #4B4B4B;
+}
+.total-price{
+    display: flex;
+    font-size: 18px;
+    color: #191919;
+    font-weight: bold;
+}
+.log-in-pay{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 0 10px;
+    margin: 30px auto;
+    box-sizing: border-box;
+}
+.log-in-pay button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 310px;
+    height: 33px;
+    outline: none;
+    border-radius: 100px;
+    font-size: 13px;
+    font-weight: 500;
+    border: none;
+    transition: .1s ease-in-out;
+}
+.log-in-pay button img{
+    width: 12px;
+    height: 14px;
+    margin-right: 5px;
+}
+#log-in-in-cart{
+    background: linear-gradient(90deg, #4094FF 0%, #6BAEFF 96%, #7CB4FF 100%);
+    color: #FFFFFF;
+}
+#go-to-pay{
+    background-image: linear-gradient(90deg, #F5DC26 0%, #FFF14B 100%, #F5DC26 100%);
+    color: #3F3A10;
+}
+.log-in-pay button:hover{
+    box-shadow: 0px 0px 17px -7px black;
+}
+
+@media (min-width: 768px) {
+    h1{
+        width: 768px;
+        margin: 50px auto;
+    }
+    .wrapper-for-purchases{
+        width: 768px;
+        margin: 50px auto;
+    }
+    .purchased-item{
+        justify-content: space-around;
+    }
+    .about-purchased-item{
+        flex-direction: row;
+        justify-content: space-around;
+        width: 60%;
+    }
+    .about-purchased-item p{
+        margin: 0;
+        font-size: 15px;
+    }
+    .wrapper-for-license{
+        width: 220px;
+        font-size: 14px;
+        height: 55px;
+    }
+    .purchased-item-license{
+        bottom: -87px;
+        height: 85px;
+    }
+    .purchased-item-license li{
+        padding: 13px 0 13px 25px;
+        background: #fff;
+    }
+    .purchased-item-price{
+        width: 15%;
+        justify-content: center;
+    }
+    .purchased-item-price span{
+        justify-content: center;
+    }
+    #purchased-item-price{
+        font-size: 20px;
+    }
+    .purchased-item-currency{
+        font-size: 11px;
+    }
+    .total-price-discount{
+        justify-content: space-around;
+    }
+    .total-price-discount{
+        width: 768px;
+    }
+    .discount{
+        width: 48%;
+    }
+    .discount input{
+        height: 55px;
+    }
+    .discount button{
+        height: 55px;
+    }
+    .wrapper-total-price{
+        width: 48%;
+        margin: 0;
+        justify-content: space-evenly;
+    }
+    .log-in-pay{
+        width: 768px;
+        justify-content: flex-end;
+    }
+    .log-in-pay button{
+        height: 55px;
+    }
+}
+@media (min-width: 1024px) {
+    h1, .wrapper-for-purchases{
+        width: 1024px;
+    }
+    .total-price-discount{
+        width: 1024px;
+    }
+    .log-in-pay{
+        width: 1024px;
+    }
+}
+@media (min-width: 1200px) {
+    h1, .wrapper-for-purchases{
+        width: 1200px;
+    }
+    .total-price-discount{
+        width: 1200px;
+    }
+    .log-in-pay{
+        width: 1200px;
+    }
+}
