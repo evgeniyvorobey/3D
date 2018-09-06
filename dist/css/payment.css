@@ -1,0 +1,225 @@
+main {
+	margin: 50px auto 50px;
+}
+
+h1 {
+	font-size: 27px;
+	font-weight: normal;
+	color: #4B4B4B;
+	text-transform: uppercase;
+	margin: 50px auto;
+}
+
+.wrapper-for-payment-type {
+	padding: 0 10px;
+	margin: 50px auto;
+}
+
+.payment-type {
+	background: #FFFFFF;
+	-webkit-box-shadow: 0 7px 20px 0 rgba(0, 0, 0, 0.06);
+	box-shadow: 0 7px 20px 0 rgba(0, 0, 0, 0.06);
+	border-radius: 2px;
+	min-width: 300px;
+	max-width: 350px;
+	height: 313px;
+	margin: 10px auto;
+}
+
+.payment-type a {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	border-radius: 2px;
+	outline: none;
+	-webkit-transition: .1s ease-in-out;
+	transition: .1s ease-in-out;
+}
+
+.payment-type a:hover {
+	-webkit-box-shadow: 0 0px 20px -10px #000;
+	box-shadow: 0 0px 20px -10px #000;
+}
+
+.payment-type a .shadow-payment {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	z-index: 2;
+	cursor: pointer;
+}
+
+.payment-type .payment-container {
+	width: 60%;
+	height: 60%;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+}
+
+.payment-type .payment-container img {
+	height: auto;
+	-webkit-filter: grayscale(100%);
+	filter: grayscale(100%);
+	-webkit-transition: .1s ease-in-out;
+	transition: .1s ease-in-out;
+}
+
+.payment-type .payment-container .payment-title {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+}
+
+.payment-type .payment-container .payment-title span:first-child {
+	text-transform: uppercase;
+	color: #4B4B4B;
+	font-size: 18px;
+}
+
+.payment-type .payment-container .payment-title span:last-child {
+	margin-top: 10px;
+	color: #ADADAD;
+	font-size: 14px;
+	text-align: center;
+}
+
+.payment-type:hover .payment-container img {
+	-webkit-filter: grayscale(0%);
+	filter: grayscale(0%);
+}
+
+img.active {
+	-webkit-filter: grayscale(0%) !important;
+	filter: grayscale(0%) !important;
+}
+
+.wrapper-for-pay-button {
+	margin: 50px auto;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+}
+
+.pay-button {
+	width: 310px;
+	height: 55px;
+	background-image: -webkit-gradient(linear, left top, right top, from(#FFF14B), color-stop(100%, #F5DC26), to(#F5DC26));
+	background-image: linear-gradient(90deg, #FFF14B 0%, #F5DC26 100%, #F5DC26 100%);
+	border-radius: 100px;
+	border: none;
+	color: #3F3A10;
+	font-size: 13px;
+	text-transform: uppercase;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	margin: 0 auto;
+	outline: none;
+}
+
+.pay-button:hover {
+	-webkit-box-shadow: 0px 0px 15px -7px;
+	box-shadow: 0px 0px 15px -7px;
+}
+
+.pay-button img {
+	margin: 0 10px 6px;
+}
+
+@media (min-width: 768px) {
+
+.wrapper-for-payment-type {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+	width: 768px;
+}
+
+.wrapper-for-payment-type h1 {
+	width: 100%;
+}
+
+.wrapper-for-payment-type .payment-type {
+	margin: 10px;
+}
+
+.wrapper-for-pay-button {
+	width: 768px;
+	-webkit-box-pack: end;
+	-ms-flex-pack: end;
+	justify-content: flex-end;
+}
+
+.pay-button {
+	margin: 0;
+}
+
+}
+
+@media (min-width: 1024px) {
+
+.wrapper-for-payment-type {
+	width: 1024px;
+}
+
+.wrapper-for-pay-button {
+	width: 1024px;
+}
+
+}
+
+@media (min-width: 1200px) {
+
+.wrapper-for-payment-type {
+	width: 1200px;
+}
+
+.wrapper-for-pay-button {
+	width: 1200px;
+}
+
+}
+

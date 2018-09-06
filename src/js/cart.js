@@ -1,6 +1,7 @@
 //--------Отображение товаров добавленных в корзину
 var wrapperForPurchases = document.getElementsByClassName('wrapper-for-purchases')[0];
 var purchasedItemLicense = document.getElementsByClassName('purchased-item-license');
+var totalPrice = document.getElementById('total-price')
 
 function renderItemsInCart() {
     checkLocalStorage();
@@ -10,6 +11,7 @@ function renderItemsInCart() {
             out += `<div class="purchased-item">`;
                 out += `<div class="purchased-item-image">`;
                 out += `<a href="#"><img src="${goodsArr[key].image}" alt=""></a>`;
+                console.log()
                 out += `</div>`;
     
                 out += `<div class="about-purchased-item">`;
@@ -33,6 +35,9 @@ function renderItemsInCart() {
             out += `</div>`;
         }
         wrapperForPurchases.innerHTML = out;
+        allItemCost()
+        totalPrice.innerHTML = `${allprice} <span class="purchased-item-currency">$</span>`;
+
 }
 
 function closeLicenseDropDown() {

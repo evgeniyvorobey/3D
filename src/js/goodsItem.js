@@ -1,33 +1,81 @@
-var owl = $('.main-photo-slider');
-owl.owlCarousel({
-    loop:true,
-    margin:10,
-    autoplay:true,
-    nav:true,
-    dotsEach:3,
-    navContainer:'.nav-for-owl',
-    dotsContainer:'.dot-fourth',
-    navText : ["",""],
-    autoplayTimeout:3000,
-    autoplayHoverPause:true,
-    responsive:{
-        0:{
-            items:1
-        },
-        768:{
-            items:1
-        },
-        1024:{
-            items:1
-        }
-    }
+// var owl = $('.main-photo-slider');
+// owl.owlCarousel({
+//     loop:true,
+//     margin:10,
+//     autoplay:false,
+//     nav:false,
+//     video:true,
+//     autoplayTimeout:3000,
+//     autoplayHoverPause:true,
+//     responsive:{
+//         0:{
+//             items:1
+//         },
+//         768:{
+//             items:1
+//         },
+//         1024:{
+//             items:1
+//         }
+//     }
+// });
+// $('.play').on('click',function(){
+//     owl.trigger('play.owl.autoplay',[1000])
+// })
+// $('.stop').on('click',function(){
+//     owl.trigger('stop.owl.autoplay')
+// })
+$(document).ready(function(){
+    $(".main-photo-slider").owlCarousel({
+        autoplay:false,
+        items: 1,
+        video:true
+    });
+}); 
+    
+    // the following to the end is whats needed for the thumbnails.
+jQuery( document ).ready(function() {
+    // 1) ASSIGN EACH 'DOT' A NUMBER
+    dotcount = 1;
+    jQuery('.owl-dot').each(function() {
+    jQuery( this ).addClass( 'dotnumber' + dotcount);
+    jQuery( this ).addClass( 'dotnumber') ;
+    jQuery( this ).attr('data-info', dotcount);
+    dotcount = dotcount + 1;
+    });
+                
+    // 2) ASSIGN EACH 'SLIDE' A NUMBER
+    slidecount = 1;
+        
+    jQuery('.owl-item').not('.cloned').each(function() {
+    jQuery( this ).addClass( 'slidenumber' + slidecount);
+    slidecount = slidecount +1;
+    });
+    
+    // SYNC THE SLIDE NUMBER IMG TO ITS DOT COUNTERPART (E.G SLIDE 1 IMG TO DOT 1 BACKGROUND-IMAGE)
+    jQuery('.owl-dot').each(function() {
+    
+        grab = jQuery(this).data('info');
+    
+        slidegrab = jQuery('.slidenumber'+ grab +' img').attr('src');
+        console.log(slidegrab);
+    
+        jQuery(this).css("background-image", "url("+slidegrab+")");  
+    
+    });
+    
+    // THIS FINAL BIT CAN BE REMOVED AND OVERRIDEN WITH YOUR OWN CSS OR FUNCTION, I JUST HAVE IT
+    // TO MAKE IT ALL NEAT 
+    amount = jQuery('.owl-dot').length;
+    gotowidth = 100/amount;
+                
+    jQuery('.owl-dot').css("width", gotowidth+"%");
+    newwidth = jQuery('.owl-dot').width();
+    jQuery('.owl-dot').css("height", newwidth+"px");
 });
-$('.play').on('click',function(){
-    owl.trigger('play.owl.autoplay',[1000])
-})
-$('.stop').on('click',function(){
-    owl.trigger('stop.owl.autoplay')
-})
+
+
+
 
 
 var owl = $('.slider-realated-products');

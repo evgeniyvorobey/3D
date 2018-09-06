@@ -81,6 +81,59 @@
 	color: #3765D9 !important;
 }
 
+.main-photo-slider { /* BELOW THIS IS JUST MY OWN BACKGROUND ETC AND ISN'T NEEDED */
+}
+
+.main-photo-slider .owl-carouse div {
+	width: 100%;
+}
+
+.main-photo-slider body {
+	background-color: #1f1f1f;
+}
+
+.main-photo-slider .owl-dots {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+}
+
+.main-photo-slider .owl-dots button {
+	background-size: cover !important;
+	outline: none;
+	margin: 10px;
+	border-radius: 0;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.main-photo-slider .owl-carousel .owl-video-play-icon {
+	background: url("../img/owl.video.play.png") no-repeat;
+}
+
+.realated-products .owl-dot {
+	width: 14px !important;
+	height: 14px !important;
+	background: none !important;
+}
+
+.realated-products .products-dot .active {
+	background: #4276f6 !important;
+}
+
+.more-products-from-author .owl-dot {
+	width: 14px !important;
+	height: 14px !important;
+	background: none !important;
+}
+
+.more-products-from-author .author-dot .active {
+	background: #4276f6 !important;
+}
+
 .active-toggle::before {
 	content: '';
 	position: absolute;

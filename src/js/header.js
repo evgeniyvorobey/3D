@@ -113,8 +113,9 @@ shade.onclick = function(){
     if (categoryBlockHeader.classList[1] == 'category-block-active') {
         categoryBlockHeader.classList.toggle('category-block-active');
         shadeOff();
-    } else {
-        return;
+    }
+    if (rightSideNav.classList.contains('right-side-nav-active')) {
+        closeRS(); 
     }
 }
 
@@ -185,14 +186,13 @@ var goodsArr = {};
 
 //------Получаем масив товаров
 fetch('goods.json')
-    .then(
-        function(response) {
-            response.json()
-            .then( function(data) {
-                goodsArr = data;
-            })
-        }
-    )
+.then(function(response) {
+    response.json()
+    .then( function(data) {
+        goodsArr = data;
+        goodsArr = data;
+    })
+})
 
 //---Добавление товара в корзину
 function addToCart() {
@@ -251,7 +251,7 @@ var miniCartEmpty = document.getElementsByClassName('mini-cart-empty');
 
 cartButton.onclick = function() {
     if ( document.body.offsetWidth < 768 ) {
-        return;
+        document.location.href = '/cart.html';
     } else {
         if ( forMiniCart.children.length == 0 ){
             showMiniCart()
@@ -268,8 +268,9 @@ cartButton.onclick = function() {
 }
 
 function allItemCost() {
+    allprice = 0;
     for ( var key in cart) {
-        allprice += goodsArr[key].cost
+        allprice += parseInt(goodsArr[key].cost)
     }
 }
 
@@ -298,7 +299,7 @@ function showMiniCart() {
             out += `</div>`;
             out += `<div class="mini-cart-price">`;
                 out += `<div class="mini-cart-all-price"><p>${cartItem}</p><p>${allprice}.00</p></div>`;
-                out += `<button><img src="img/cartYellow.png">Checkout</button>`
+                out += `<button onclick="goToMainCart()"><img src="img/cartYellow.png">Checkout</button>`
             out += `</div>`
 
         out += `</div>`;
@@ -306,6 +307,9 @@ function showMiniCart() {
     forMiniCart.innerHTML += out;
 }
 
+function goToMainCart() {
+    document.location.href = '/cart.html';
+}
 var forMinCart = document.getElementsByClassName('for-mini-cart')[0];
 var miniCartItemContainer = document.getElementsByClassName('mini-cart-item-container');
 
@@ -357,3 +361,29 @@ function deleteModalAlert() {
     shadeOff();
     modalAlert.classList.remove('modal-alert-active');
 }
+
+
+//--------------footer
+var footerEnter = document.getElementsByClassName('footer-enter')[0];
+var footerRegistration = document.getElementsByClassName('footer-registration')[0];
+
+footerEnter.onclick = function() {
+    toggleLogInModal();
+}
+
+footerRegistration.onclick = function() {
+    toggleLogInModal();
+    logIn.classList.remove('activ-log-in-block');
+    for ( var i = 0; i < navigationButton.children.length; i++ ) {
+        console.log()
+        navigationButton.children[i].classList.remove('active-button');
+    }
+    navigationButton.children[1].classList.add('active-button');
+    registration.classList.add('activ-log-in-block');
+}
+
+// shade.onclick = () => { 
+//     if (rightSideNav.classList.contains('right-side-nav-active')) {
+//         closeRS(); 
+//     }
+// }

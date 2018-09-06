@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/evgeniyvorobey/RentApartments.git"
+    "url": "git+https://github.com/evgeniyvorobey/3D.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/evgeniyvorobey/RentApartments/issues"
+    "url": "https://github.com/evgeniyvorobey/3D/issues"
   },
-  "homepage": "https://github.com/evgeniyvorobey/RentApartments#readme",
+  "homepage": "https://github.com/evgeniyvorobey/3D#readme",
   "devDependencies": {
     "del": "^3.0.0",
     "gulp": "^3.9.1",

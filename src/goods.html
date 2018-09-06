@@ -162,20 +162,21 @@
                         <span id="find-models">234 results 3 psge</span>
                 </div>
                 <div class="rating">
-                    
-                    <div class="wrapper-for-select">
+
+                    <li id="curent-rating">
                         <div class="dropdown-icon">
                             <span></span>
                             <span></span>
                             <span></span>
                         </div>
-                        <select name="" id="">
-                            <option value="Most popular">Most popular</option>
-                            <option value="New models">New models</option>
-                            <option value="Good price">Good price</option>
-                        </select>
+                        <span class="selected-item" id="price">Good price</span>
                         <div class="arrow-down"></div>
-                    </div>
+                        <ul class="rating-categoryes">
+                            <li id="popular" class="rating-categoryes-item">Most popular</li>
+                            <li id="new" class="rating-categoryes-item">New models</li>
+                            <li id="price" class="rating-categoryes-item">Good price</li>
+                        </ul>
+                    </li>
                     <div class="filter-button">
                         <span>Filter</span>
                         <img src="img/filter.png" alt="">
@@ -191,21 +192,21 @@
                     <div class="sorting">
                         <div class="selected-sort"></div>
                         <div id="sort-block" class="set-price-range">
-                            <div id="sort-block" class="set-price-range-title">
+                            <div id="sort-block" class="set-filter">
                                 <h3 class="range-title-h3">Price</h3>
                                 <span class="pointer"></span>
                             </div>
-                            <div class="sorting-price">
+                            <div class="filter-block">
                                 <div class="for-input-price-range">
-                                    <form action="">
+                                    <div class="form">
                                         <div class="min-price">
                                             <input type="number" name="min-price" min="0" max="1000" step="1" id="min-price">
                                         </div>
                                         <div class="max-price">
                                             <input type="number" name="max-price" min="0" max="1000" step="1" id="max-price">
                                         </div>
-                                        <button type="submit">Ok</button>
-                                    </form>
+                                        <button id="submit-all">Ok</button>
+                                    </div>
                                 </div>
                                 <div class="range-price">
                                     <div class="slider-range-container"></div>
@@ -213,50 +214,50 @@
                             </div>
                         </div>
                         <div id="sort-block" class="set-formats">
-                            <div id="sort-block" class="set-formats-title">
+                            <div id="sort-block" class="set-filter">
                                 <h3 class="range-title-h3">Formats</h3>
                                 <span class="pointer"></span>
                             </div>
-                            <div class="sorting-formats">
+                            <div class="filter-block">
                                 <div class="formats-item">
-                                    <input added="true" type="checkbox" name="nature" id="nature">
+                                    <input added="true" type="checkbox" name="formats" id="nature">
                                     <label for="nature">Nature</label>
                                 </div>
                                 <div class="formats-item">
-                                    <input added="true" type="checkbox" name="carton" id="cartoon">
+                                    <input added="true" type="checkbox" name="formats" id="cartoon">
                                     <label for="cartoon">Cartoon</label>
                                 </div>
                                 <div class="formats-item">
-                                    <input added="true" type="checkbox" name="mammal" id="mammal">
+                                    <input added="true" type="checkbox" name="formats" id="mammal">
                                     <label for="mammal">Mammal</label>
                                 </div>
                                 <div class="formats-item">
-                                    <input added="true" type="checkbox" name="fish" id="fish">
+                                    <input added="true" type="checkbox" name="formats" id="fish">
                                     <label for="fish">Fish</label>
                                 </div>
                             </div>
                         </div>
                         <div id="sort-block" class="set-rating">
-                            <div id="sort-block" class="set-rating-title">
+                            <div id="sort-block" class="set-filter">
                                 <h3 class="range-title-h3">Rating</h3>
                                 <span class="pointer"></span>
                             </div>
-                            <div class="sort-rating">
+                            <div class="filter-block">
                                 <div class="sort-rating-item">
-                                    <input type="checkbox" name="" id="star1">
+                                    <input type="checkbox" name="rating" value="1" id="star1">
                                     <label for="star1">
                                         <img src="img/StarCopy.png" alt="">
                                     </label>
                                 </div>
                                 <div class="sort-rating-item">
-                                    <input type="checkbox" name="" id="star2">
+                                    <input type="checkbox" name="rating" value="2" id="star2">
                                     <label for="star2">
                                         <img src="img/StarCopy.png" alt="">
                                         <img src="img/StarCopy.png" alt="">
                                     </label>
                                 </div>
                                 <div class="sort-rating-item">
-                                    <input type="checkbox" name="" id="star3">
+                                    <input type="checkbox" name="rating" value="3" id="star3">
                                     <label for="star3">
                                         <img src="img/StarCopy.png" alt="">
                                         <img src="img/StarCopy.png" alt="">
@@ -264,7 +265,7 @@
                                     </label>
                                 </div>
                                 <div class="sort-rating-item">
-                                    <input type="checkbox" name="" id="star4">
+                                    <input type="checkbox" name="rating" value="4" id="star4">
                                     <label for="star4">
                                         <img src="img/StarCopy.png" alt="">
                                         <img src="img/StarCopy.png" alt="">
@@ -273,7 +274,7 @@
                                     </label>
                                 </div>
                                 <div class="sort-rating-item">
-                                    <input type="checkbox" name="" id="star5">
+                                    <input type="checkbox" name="rating" value="5" id="star5">
                                     <label for="star5">
                                         <img src="img/StarCopy.png" alt="">
                                         <img src="img/StarCopy.png" alt="">
@@ -285,25 +286,25 @@
                             </div>
                         </div>
                         <div id="sort-block" class="set-artist">
-                            <div id="sort-block" class="set-artist-title">
+                            <div id="sort-block" class="set-filter">
                                 <h3 class="range-title-h3">Artist</h3>
                                 <span class="pointer"></span>
                             </div>
-                            <div class="sort-artist">
+                            <div class="filter-block">
                                 <div class="artist-item">
-                                    <input added="true" type="checkbox" name="artist-id1" id="artist-id1">
+                                    <input added="true" type="checkbox" name="artist-id1" value="1" id="artist-id1">
                                     <label for="artist-id1">Artist name</label>
                                 </div>
                                 <div class="artist-item">
-                                    <input added="true" type="checkbox" name="artist-id2" id="artist-id2">
+                                    <input added="true" type="checkbox" name="artist-id2" value="2" id="artist-id2">
                                     <label for="artist-id2">Artist name</label>
                                 </div>
                                 <div class="artist-item">
-                                    <input added="true" type="checkbox" name="artist-id3" id="artist-id3">
+                                    <input added="true" type="checkbox" name="artist-id3" value="3" id="artist-id3">
                                     <label for="artist-id3">Artist name</label>
                                 </div>
                                 <div class="artist-item">
-                                    <input added="true" type="checkbox" name="artist-id4" id="artist-id4">
+                                    <input added="true" type="checkbox" name="artist-id4" value="4" id="artist-id4">
                                     <label for="artist-id4">Artist name</label>
                                 </div>
                             </div>
@@ -917,6 +918,6 @@
     <script src="js/header.js"></script>
     <script src="js/nouislider.min.js"></script>
     <script src="js/goods.js"></script>
-
+    <script src="js/footer.js"></script>
 </body>
 </html>

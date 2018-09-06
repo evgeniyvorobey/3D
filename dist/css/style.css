@@ -102,8 +102,8 @@ li {
 	width: 95px;
 	height: 30px;
 	font-weight: 100;
-	background: -webkit-gradient(linear, right top, left top, from(#4275e3), to(#5885fa));
-	background: linear-gradient(to left, #4275e3, #5885fa);
+	background-image: -webkit-gradient(linear, left top, right top, from(#3562D7), color-stop(98%, #4275E3));
+	background-image: linear-gradient(90deg, #3562D7 0%, #4275E3 98%);
 	border-radius: 4px;
 	padding: 0 0 0 10px;
 	-webkit-box-shadow: 0px 0px 25px -10px;
@@ -756,6 +756,10 @@ a {
 	top: 55px;
 	width: 100%;
 	z-index: 1;
+}
+
+.bread-crumbs .active {
+	background: transparent !important;
 }
 
 .bread-crumbs ul {
@@ -1933,6 +1937,7 @@ footer {
 
 .footer-main-center li {
 	margin: 10px 0;
+	cursor: pointer;
 }
 
 .footer-main-center a {

@@ -57,6 +57,55 @@
 .active-toggle{
     color: #3765D9 !important;
 }
+.main-photo-slider{
+    .owl-carouse div {
+        width: 100%;
+    }
+    
+    /* BELOW THIS IS JUST MY OWN BACKGROUND ETC AND ISN'T NEEDED */
+    body{
+        background-color: #1f1f1f;
+    }
+    .owl-dots{
+        display: flex;
+        justify-content: center;
+    }
+    .owl-dots button{
+        background-size: cover !important;
+        outline: none;
+        margin: 10px;
+        border-radius: 0;
+        box-sizing: border-box;
+    }
+    .owl-carousel .owl-video-play-icon{
+        background: url('../img/owl.video.play.png') no-repeat;
+    }
+}
+.realated-products{
+    .owl-dot{
+        width: 14px !important;
+        height: 14px !important;
+        background: none !important;
+    }
+    .products-dot{
+        .active{
+            background: #4276f6 !important;
+        }
+    }
+
+}
+.more-products-from-author{
+    .owl-dot{
+        width: 14px !important;
+        height: 14px !important;
+        background: none !important;
+    }
+    .author-dot{
+        .active{
+            background: #4276f6 !important;
+        }
+    }
+}
 .active-toggle::before{
     content: '';
     position: absolute;
@@ -112,8 +161,6 @@
     border-radius: 4px;
     background: #4B4B4B;
 }
-
-
 .goods-item-description-comments-header-info{
     display: flex;
     color: #191919;
