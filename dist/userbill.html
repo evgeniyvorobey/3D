@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/daterangepicker.css">
     <link rel="stylesheet" href="css/userbill.css">
     <link rel="stylesheet" href="css/footer.css">
     <title>Bill</title>
@@ -153,7 +154,145 @@
         </div>
     </header>
     <main>
+        <div class="long-line"></div>
+        <div class="container">
+            <h1>BILL</h1>
+            <div class="last-change">
+                <div class="balance">
+                    <div class="balance-main">
+                        <span class="balance-title">Balance</span>
+                        <div class="current-balance">
+                            <div class="wrapper-for-balance"><span class="upper">$ 1509.</span> <span class="zeros">00</span></div>
+                            <span class="last-balance-change"><img src="img/arrowgreen.png" alt=""> <span>15.00</span></span>
+                        </div>
+                    </div>
+                    <div class="balance-button">
+                        <a class="withdraw" href="">Withdraw</a>
+                        <a class="replenish" href="">Replenish</a>
+                    </div>
 
+                </div>
+                <div class="spent">
+                    <span class="spent-title">Spent</span>
+                    <div class="spent-main">
+                        <div class="spent-per-week">
+                            <span><span class="upper">$ 159.</span> <span class="zeros">00</span></span>
+                            <span class="orders"><img src="img/imgIcon.png" alt=""> <span class="amount-orders">2</span> per week</span>
+                        </div>
+                        <div class="spent-per-month">
+                                <span><span class="upper">$ 349.</span> <span class="zeros">00</span></span>
+                                <span class="orders"><img src="img/imgIcon.png" alt=""> <span class="amount-orders">8</span> per month</span>
+                            </div>
+                    </div>
+                </div>
+            </div>
+            <div class="balance-history">
+                <div class="wrapper-balance-history-filter">
+                    <div class="balance-history-top">
+                        <div class="balance-history-top-left">
+                            <span class="title">Balance sheet history </span>
+                            <button class="balance-history-button">Filter <span class="arrow-span"></span></button>
+                        </div>
+                        <div class="balance-history-top-right">
+                            <div class="balance-history-up">
+                                <img src="img/arrowgreen.png" alt="">
+                                <span><span class="upper">$ 1539.</span> <span class="zeros">00</span></span>
+                            </div>
+                            <div class="balance-history-down">
+                                    <img src="img/arrowred.png" alt="">
+                                    <span><span class="upper">$ 1421.</span> <span class="zeros">00</span></span>
+                                </div>
+                        </div>
+                    </div>
+                    <div class="balance-history-filter">
+                        <div class="wrapper-for-input-dates">
+                            <input id="date" type="text" name="startDate">
+                            <img src="img/date.png" alt="">
+                        </div>
+                        <div class="operation-type">
+                            <span id="4" class="current-filter-type">Purchase</span>
+                            <ul class="filter-type">
+                                <li id="4" value="all" class="filter-type-item">All</li>
+                                <li id="1" value="purchase" class="filter-type-item">Purchase</li>
+                                <li id="2" value="replenishment"class="filter-type-item">Replenishent</li>
+                                <li id="3" value="referal"class="filter-type-item">Referal</li>
+                            </ul>
+                            <span class="span-arow"></span>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="list-balance-history">
+                    <div class="list-balance-history-title">
+                        <div class="description">
+                            <span>Description</span>
+                        </div>
+                        <div class="bill">
+                            <span>Bill</span>
+                        </div>
+                        <div class="date">
+                            <span>Date</span>
+                        </div>
+                        <div class="sum">
+                            <span>Sum</span>
+                        </div>
+                    </div>
+                    <div class="list-balance-history-item">
+                        <div class="description">
+                            <span>Replenishment</span>
+                        </div>
+                        <div class="bill">
+                            <span>Visa</span>
+                            <span class="number-card">32**********5628</span>
+                        </div>
+                        <div class="date">
+                            <span>12.05.18</span>
+                        </div>
+                        <div class="sum">
+                            <span class="add-money">$ 175.00</span>
+                        </div>
+                    </div>
+                    <div class="list-balance-history-item">
+                        <div class="description">
+                            <span>Withdrawal</span>
+                        </div>
+                        <div class="bill">
+                            <span>Master Card</span>
+                            <span class="number-card">32**********5628</span>
+                        </div>
+                        <div class="date">
+                            <span>14.05.18</span>
+                        </div>
+                        <div class="sum">
+                            <span class="withdrawal-money">$ 155.00</span>
+                        </div>
+                    </div>
+                    <div class="list-balance-history-item">
+                        <div class="description">
+                            <span>Purchase</span>
+                            <span class="detail-description">
+                                <a href="">14 item</a>
+                                <div class="rurchase-item-img">
+                                    <img src="img/Rectangle 8.png" alt="">
+                                    <img src="img/added1.png" alt="">
+                                </div>
+                                <a class="detail-description-button" href=""><img src="img/dot.png" alt=""></a>
+                            </span>
+                        </div>
+                        <div class="bill">
+                            <span>Visa</span>
+                            <span class="number-card">32**********5628</span>
+                        </div>
+                        <div class="date">
+                            <span>24.07.18</span>
+                        </div>
+                        <div class="sum">
+                            <span class="withdrawal-money">$ 465.00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <aside class="right-side-nav">
             <div class="right-side-nav-header">
                 <img src="img/left-side-nav/dash.png" alt=""> 
@@ -267,7 +406,11 @@
             </div>
         </div>
     </footer>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/moment.min.js"></script>
+    <script src="js/daterangepicker.js"></script>
     <script src="js/fordash.js"></script>
     <script src="js/header.js"></script>
+    <script src="js/userbill.js"></script>
 </body>
 </html>

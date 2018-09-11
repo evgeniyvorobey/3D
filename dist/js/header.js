@@ -202,6 +202,7 @@ function addToCart() {
             alert('This goods currently added')
         } else {
             cart[idGoods] = 1
+            alerAddToCart();
         }
     }
     saveCartToLS();
@@ -361,7 +362,18 @@ function deleteModalAlert() {
     shadeOff();
     modalAlert.classList.remove('modal-alert-active');
 }
+var containerForAlert = document.getElementsByClassName('container-for-alert-title')[0];
 
+function alerAddToCart() {
+    shadeOn();
+    containerForAlert.innerHTML = `Товар добавлен в корзину`;
+    modalAlert.classList.add("modal-alert-active","alert-success") ;
+
+    setTimeout(deleteModalAlert, 1000)
+}
+function alertItenInCart() {
+
+}
 
 //--------------footer
 var footerEnter = document.getElementsByClassName('footer-enter')[0];
@@ -381,9 +393,3 @@ footerRegistration.onclick = function() {
     navigationButton.children[1].classList.add('active-button');
     registration.classList.add('activ-log-in-block');
 }
-
-// shade.onclick = () => { 
-//     if (rightSideNav.classList.contains('right-side-nav-active')) {
-//         closeRS(); 
-//     }
-// }

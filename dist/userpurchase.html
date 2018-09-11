@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/daterangepicker.css">
+    <link rel="stylesheet" href="css/userpurchase.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <title>Bill</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="left-side">
+                <ul class="navigation">
+                    <li class="nav-item home-link"><a href="index.html">3D MARKETPLACE</a></li>
+                    <li class="nav-item"><a href="">ENG</a>
+                        <ul class="sub-navigation">
+                        <li class="sub-nav-item"><a href="">RUS</a></li>
+                        <li class="sub-nav-item"><a href="">UKR</a></li>
+                    </ul>
+                    </li>
+                    <li id="secondMod" class="nav-item"><a> <img src="img/models.png" alt="">MODELS</a></li>
+                </ul>
+            </div>
+            <div class="hamburger">
+                <span class="hamburger-item"></span>
+                <span class="hamburger-item"></span>
+                <span class="hamburger-item"></span>
+            </div>
+            <div class="right-side">
+                <ul class="navigation">
+                    <li class="nav-item" id="header-search">
+                            <input type="search" name="" placeholder=" Search" id="">
+                            <img class="search-img" src="img/search.png" alt="">
+                    </li>
+                    <li class="nav-item"><a href="aboutus.html">About</a></li>
+                    <li class="nav-item"><a href="support.html">Support</a></li>
+                    <li id="cart" class="nav-item"><a><img src="img/cart.png" alt=""><span id="number-of-goods">0</span></a></li>
+                    <li id="header-nav-log-in" class="nav-item "><a><img src="img/user.png" alt=""> Log in</a></li>
+                </ul>
+                <div class="for-mini-cart"></div>
+            </div>
+            <div class="bread-crumbs">
+                    <ul>
+                        <li><a href="">Main</a> <span class="arrow"></span></li>
+                        <li><a href="">News</a></li>
+                    </ul>
+            </div>
+        </nav>
+        <div class="wrapper-for-header-category">
+        <div class="category-block-header">
+                <div class="category-item"> <a href=""> <div> <img src="img/category/imgonline-com-ua-Mirror-ABqxm8T4cU8T.png" alt=""><p>Aircraft</p></div></a></div>
+                <div class="category-item"> <a href=""> <div> <img src="img/category/dog@3x.png" alt=""><p>Animals</p></div></a></div>
+                <div class="category-item"> <a href=""> <div> <img src="img/category/column-2@3x.png" alt=""><p>Architecture</p></div></a></div>
+                <div class="category-item"> <a href=""> <div> <img src="img/category/cityscape@3x.png" alt=""><p>Exterior</p></div></a></div>
+                <div class="category-item"> <a href=""> <div> <img src="img/category/desk-lamp@3x.png" alt=""><p>Interior</p></div></a></div>
+                <div class="category-item"> <a href=""> <div> <img src="img/category/car@3x.png" alt=""><p>Car</p></div></a></div>
+                <div class="category-item"> <a href=""> <div> <img src="img/category/man-2@3x.png" alt=""><p>Character</p></div></a></div>
+                <div class="category-item"> <a href=""> <div> <img src="img/category/responsive@3x.png" alt=""><p>Electronics</p></div></a></div>
+                <div class="category-item"> <a href=""> <div> <img src="img/category/harvest@3x.png" alt=""><p>Food</p></div></a></div>
+                <div class="category-item"> <a href=""> <div> <img src="img/category/livingroom@3x.png" alt=""><p>Furniture</p></div></a></div>
+                <div class="category-item"> <a href=""> <div> <img src="img/category/vase@3x.png" alt=""><p>Household</p></div></a></div>
+                <div class="category-item"> <a href=""> <div> <img src="img/category/Group 20@3x.png" alt=""><p>Industrial</p></div></a></div>
+                <div class="category-item"> <a href=""> <div> <img src="img/category/forest@3x.png" alt=""><p>Plant</p></div></a></div>
+                <div class="category-item"> <a href=""> <div> <img src="img/category/atomic@3x.png" alt=""><p>Science</p></div></a></div>
+                <div class="category-item"> <a href=""> <div> <img src="img/category/satellite-3@3x.png" alt=""><p>Spase</p></div></a></div>
+                <div class="category-item"> <a href=""> <div> <img src="img/category/sport-faculty@3x.png" alt=""><p>Sport</p></div></a></div>
+                <div class="category-item"> <a href=""> <div> <img src="img/category/delivery-truck@3x.png" alt=""><p>Vehicle</p></div></a></div>
+                <div class="category-item"> <a href=""> <div> <img src="img/category/boat@3x.png" alt=""><p>Watercraft</p></div></a></div>
+                <div class="category-item"> <a href=""> <div> <img src="img/category/gun@3x.png" alt=""><p>Millitary</p></div></a></div>
+                <div class="category-item"> <a href=""> <div> <img src="img/category/infinity@3x.png" alt=""><p>All category</p></div></a></div>
+            </div>
+        </div> 
+        <div class="shade"></div>
+        <div class="log-in">
+            <div class="close-button">
+                <span></span>
+                <span></span>
+            </div>
+            <div class="navigation-button">
+                <button id="log-in-button" class="log-in-button active-button">Log in</button>
+                <button id="registration-button" class="registration-button">Registration</button>
+            </div>
+            <div class="log-in-block activ-log-in-block">
+                <form action="">
+                    <div class="input-style">
+                        <div class="eror-title"><span>E-mail</span><span class="error-email">We did not find such an email <img src="img/eror.png" alt=""></span></div>
+                        <input name="mail" type="email" placeholder="  name@domain.com" required>
+                    </div>
+                    <div class="input-style">
+                        <div class="eror-title"><span>Password</span><span class="error-password">Something went wrong<img src="img/eror.png" alt=""></span></div>
+                        <input name="password" type="password" placeholder="  password" required>
+                        <div class="forgot-password"><a id="forgot-password">Forgot password?</a></div>
+                    </div>
+                    <button type="submit">Enter</button>
+                </form>
+            </div>
+            <div class="registration-block">
+                <form action="">
+                    <div class="input-style">
+                        <div class="eror-title"><span>Name</span><span class="error-email">We did not find such an email <img src="img/eror.png" alt=""></span></div>
+                        <input name="name" type="text" placeholder="  name" required>
+                    </div>
+                    <div class="input-style">
+                        <div class="eror-title"><span>E-mail</span><span class="error-email">We did not find such an email <img src="img/eror.png" alt=""></span></div>
+                        <input name="mail" type="email" placeholder="  name@domain.com" required>
+                    </div>
+                    <div class="input-style">
+                        <div class="eror-title"><span>Password</span><span class="error-email">We did not find such an email <img src="img/eror.png" alt=""></span></div>
+                        <input name="password" type="password" placeholder="  password" required>
+                    </div>
+                    <div class="input-style">
+                        <div class="eror-title"><span>Password</span><span class="error-email">We did not find such an email <img src="img/eror.png" alt=""></span></div>
+                        <input name="password" type="password" placeholder="  password" required>
+                    </div>
+                    <div class="input-style input-checkbox">
+                        <input id="checkbox" type="checkbox"><label class="conditions" for="checkbox">I agree. <a href="">With the conditions</a></label>
+                    </div>
+                    <button type="submit">Registartion</button>
+                </form>
+            </div>
+            <div class="restoring-password">
+                <div class="restoring-title">
+                    <h3>Restor password</h3>
+                    <p>Remembered?<a id="return-to-log-in" >Enter</a></p>
+                </div>
+                <div class="restoring-block">
+                    <form action="">
+                        <div class="input-style">
+                            <span>E-mail</span>
+                            <input name="mail" type="email" placeholder="  name@domain.com">
+                        </div>
+                        <div class="restoring-description">
+                            <p>A link to password recovery will be sent to your e-mail</p>
+                        </div>
+                        <button type="submit">Restore</button>
+                    </form>
+                </div>
+            </div>
+            <div class="social-link-log-in">
+                <p>Enter with social</p>
+                <a href=""><img src="img/social/fb.png" alt=""></a>
+                <a href=""><img src="img/social/twitter.png" alt=""></a>
+                <a href=""><img src="img/social/insta.png" alt=""></a>
+            </div>
+        </div>
+        <div class="modal-alert">
+            <p class="container-for-alert-title"><b>Lorem ipsum</b> dolor sit amet consectetur adipisicing elit.</p>
+            <button class="close-modal-alert"></button>
+        </div>
+    </header>
+    <main>
+        <div class="long-line"></div>
+        <div class="container">
+            <h1>Purchases</h1>
+            <div class="wrapper-for-purchases">
+                <div class="block-for-button">
+                    <button value="all-purchase" class="button-style style-active-button"><img src="img/downloaded.png" alt=""> Purchased goods</button>
+                    <button value="history-purchase" class="button-style"><img src="img/history.png" alt=""> Purchase history</button>
+                    <button value="request-history" class="button-style"><img src="img/request.png" alt=""> Request a refund</button>
+                </div>
+                <div class="all-purchase active">
+                    <div class="purchase-item">
+                        <div class=purchase-image>
+                            <a href=""> <img src="img/slider/2.png" alt=""></a>
+                        </div>
+                        <div class="item-info">
+                            <span class="lisence-info">Extended license</span>
+                            <div class="purchased-item-format">
+                                <span>.obg</span>
+                                <span>.pdf</span>
+                                <span>.max</span>
+                            </div>
+                        </div>
+                        <div class="download-purchase">
+                            <button class="download-purchased-button" id="000">
+                                <img src="img/downloads.png" alt="">
+                                Download
+                            </button>
+                        </div>
+                    </div>
+                    <div class="purchase-item">
+                        <div class=purchase-image>
+                            <a href=""> <img src="img/slider/5.png" alt=""></a>
+                        </div>
+                        <div class="item-info">
+                            <span class="lisence-info">Extended license</span>
+                            <div class="purchased-item-format">
+                                <span>.obg</span>
+                                <span>.pdf</span>
+                                <span>.max</span>
+                            </div>
+                        </div>
+                        <div class="download-purchase">
+                            <button class="download-purchased-button" id="000">
+                                <img src="img/downloads.png" alt="">
+                                Download
+                            </button>
+                        </div>
+                    </div>
+                    <div class="purchase-item">
+                        <div class=purchase-image>
+                            <a href=""> <img src="img/slider/1.png" alt=""></a>
+                        </div>
+                        <div class="item-info">
+                            <span class="lisence-info">Extended license</span>
+                            <div class="purchased-item-format">
+                                <span>.obg</span>
+                                <span>.pdf</span>
+                                <span>.max</span>
+                            </div>
+                        </div>
+                        <div class="download-purchase">
+                            <button class="download-purchased-button" id="000">
+                                <img src="img/downloads.png" alt="">
+                                Download
+                            </button>
+                        </div>
+                    </div>
+                    <div class="purchase-item">
+                        <div class=purchase-image>
+                            <a href=""> <img src="img/slider/3.png" alt=""></a>
+                        </div>
+                        <div class="item-info">
+                            <span class="lisence-info">Extended license</span>
+                            <div class="purchased-item-format">
+                                <span>.obg</span>
+                                <span>.pdf</span>
+                                <span>.max</span>
+                            </div>
+                        </div>
+                        <div class="download-purchase">
+                            <button class="download-purchased-button" id="000">
+                                <img src="img/downloads.png" alt="">
+                                Download
+                            </button>
+                        </div>
+                    </div>
+                    <div class="purchase-item">
+                        <div class=purchase-image>
+                            <a href=""> <img src="img/slider/6.png" alt=""></a>
+                        </div>
+                        <div class="item-info">
+                            <span class="lisence-info">Extended license</span>
+                            <div class="purchased-item-format">
+                                <span>.obg</span>
+                                <span>.pdf</span>
+                                <span>.max</span>
+                            </div>
+                        </div>
+                        <div class="download-purchase">
+                            <button class="download-purchased-button" id="000">
+                                <img src="img/downloads.png" alt="">
+                                Download
+                            </button>
+                        </div>
+                    </div>
+                    <div class="purchase-item">
+                        <div class=purchase-image>
+                            <a href=""> <img src="img/slider/5.png" alt=""></a>
+                        </div>
+                        <div class="item-info">
+                            <span class="lisence-info">Extended license</span>
+                            <div class="purchased-item-format">
+                                <span>.obg</span>
+                                <span>.pdf</span>
+                                <span>.max</span>
+                            </div>
+                        </div>
+                        <div class="download-purchase">
+                            <button class="download-purchased-button" id="000">
+                                <img src="img/downloads.png" alt="">
+                                Download
+                            </button>
+                        </div>
+                    </div>
+                    <div class="purchase-item">
+                        <div class=purchase-image>
+                            <a href=""> <img src="img/slider/8.png" alt=""></a>
+                        </div>
+                        <div class="item-info">
+                            <span class="lisence-info">Extended license</span>
+                            <div class="purchased-item-format">
+                                <span>.obg</span>
+                                <span>.pdf</span>
+                                <span>.max</span>
+                            </div>
+                        </div>
+                        <div class="download-purchase">
+                            <button class="download-purchased-button" id="000">
+                                <img src="img/downloads.png" alt="">
+                                Download
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="history-purchase">
+                    <div class="last-bought">
+                        <div class="bought">
+                            <span class="bought-title">Purchased</span>
+                            <div class="bought-main">
+                                <div class="bought-per-week">
+                                    <span><span class="upper">$ 159.</span> <span class="zeros">00</span></span>
+                                    <span class="orders"><img src="img/imgIcon.png" alt=""> <span class="amount-orders">2</span> per week</span>
+                                </div>
+                                <div class="bought-per-month">
+                                        <span><span class="upper">$ 349.</span> <span class="zeros">00</span></span>
+                                        <span class="orders"><img src="img/imgIcon.png" alt=""> <span class="amount-orders">8</span> per month</span>
+                                    </div>
+                            </div>
+                        </div>
+                        <div class="discount">
+                            <div class="top">
+                                    <span class="discount-title">Accumulative discount</span>
+                                    <a class="more-info" href="">More info</a>
+                            </div>
+                            <div class="current-discount">
+                                <div class="wrapper-for-discount"><span class="upper">3</span> <span class="zeros">%</span></div>
+                                <span class="spent">3400 $</span>
+                                <div class="next-discount">
+                                    <span class="min" >0%</span>
+                                    <div class="line-progress">
+                                        <div class="progress-bacground"></div>
+                                    </div>
+                                    <span class="max" >10%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <div class="balance-history">
+                <div class="wrapper-balance-history-filter">
+                    <div class="balance-history-top">
+                        <div class="balance-history-top-left">
+                            <span class="title">Balance sheet history </span>
+                            <button class="balance-history-button">Filter <span class="arrow-span"></span></button>
+                        </div>
+                        <div class="balance-history-top-right">
+                            <div class="balance-history-up">
+                                <img src="img/arrowgreen.png" alt="">
+                                <span><span class="upper">$ 1539.</span> <span class="zeros">00</span></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="balance-history-filter">
+                        <div class="wrapper-for-input-dates">
+                            <input id="date" type="text" name="startDate">
+                            <img src="img/date.png" alt="">
+                        </div>
+                        <div class="operation-type">
+                            <span id="4" class="current-filter-type">Purchase</span>
+                            <ul class="filter-type">
+                                <li id="4" value="all" class="filter-type-item">All</li>
+                                <li id="1" value="purchase" class="filter-type-item">Purchase</li>
+                                <li id="2" value="replenishment"class="filter-type-item">Replenishent</li>
+                                <li id="3" value="referal"class="filter-type-item">Referal</li>
+                            </ul>
+                            <span class="span-arow"></span>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="list-balance-history">
+                        <div class="list-balance-history-title">
+                            <div class="description">
+                                <span>Description</span>
+                            </div>
+                            <div class="lisence">
+                                <span>Lisence</span>
+                            </div>
+                            <div class="bill">
+                                <span>Bill</span>
+                            </div>
+                            <div class="date">
+                                <span>Date</span>
+                            </div>
+                            <div class="sum">
+                                <span>Sum</span>
+                            </div>
+                        </div>
+                        <div class="list-balance-history-item">
+                            <div class="description">
+                                <img class="balance-histoty-item-img" src="img/added1.png" alt="">
+                                <span>Replenishment</span>
+                            </div>
+                            <div class="lisence">
+                                <span>Lisence</span>
+                            </div>
+                            <div class="bill">
+                                <span>Visa</span>
+                                <span class="number-card">32**********5628</span>
+                            </div>
+                            <div class="date">
+                                <span>12.05.18</span>
+                            </div>
+                            <div class="sum">
+                                <span class="add-money">$ 175.00</span>
+                            </div>
+                        </div>
+                        <div class="list-balance-history-item">
+                            <div class="description">
+                                <img class="balance-histoty-item-img" src="img/added1.png" alt="">
+                                <span>Withdrawal</span>
+                            </div>
+                            <div class="lisence">
+                                <span>Lisence</span>
+                            </div>
+                            <div class="bill">
+                                <span>Master Card</span>
+                                <span class="number-card">32**********5628</span>
+                            </div>
+                            <div class="date">
+                                <span>14.05.18</span>
+                            </div>
+                            <div class="sum">
+                                <span class="withdrawal-money">$ 155.00</span>
+                            </div>
+                        </div>
+                        <div class="list-balance-history-item">
+                            <div class="description">
+                                <img class="balance-histoty-item-img" src="img/added1.png" alt="">
+                                <span>Purchase</span>
+                            </div>
+                            <div class="lisence">
+                                <span>Lisence</span>
+                            </div>
+                            <div class="bill">
+                                <span>Visa</span>
+                                <span class="number-card">32**********5628</span>
+                            </div>
+                            <div class="date">
+                                <span>24.07.18</span>
+                            </div>
+                            <div class="sum">
+                                <span class="withdrawal-money">$ 465.00</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+                <div class="request-history">
+                    <div class="header-button">
+                        <span>History of requests</span>
+                        <button value="return-goods" class="create-request"> Create request</button>
+                    </div>
+                    <div class="wrapper-for-request-history">
+                            <div class="list-balance-history">
+                                    <div class="list-balance-history-title">
+                                        <div class="description">
+                                            <span>Description</span>
+                                        </div>
+                                        <div class="lisence">
+                                            <span>Lisence</span>
+                                        </div>
+                                        <div class="date">
+                                            <span>Date</span>
+                                        </div>
+                                        <div class="sum">
+                                            <span>Sum</span>
+                                        </div>
+                                        <div class="status">
+                                            <span>Status</span>
+                                        </div>
+                                    </div>
+                                    <div class="list-balance-history-item">
+                                        <div class="description">
+                                            <img class="balance-histoty-item-img" src="img/added1.png" alt="">
+                                            <span>Replenishment</span>
+                                        </div>
+                                        <div class="lisence">
+                                            <span>Lisence</span>
+                                        </div>
+                                        <div class="date">
+                                            <span>12.05.18</span>
+                                        </div>
+                                        <div class="sum">
+                                            <span class="add-money">$ 175.00</span>
+                                        </div>
+                                        <div class="status">
+                                            <img src="img/in-poces.png" alt="">
+                                            <span class="in-rocess">In process</span>
+                                        </div>
+                                    </div>
+                                    <div class="list-balance-history-item">
+                                        <div class="description">
+                                            <img class="balance-histoty-item-img" src="img/added1.png" alt="">
+                                            <span>Withdrawal</span>
+                                        </div>
+                                        <div class="lisence">
+                                            <span>Lisence</span>
+                                        </div>
+                                        <div class="date">
+                                            <span>14.05.18</span>
+                                        </div>
+                                        <div class="sum">
+                                            <span class="withdrawal-money">$ 155.00</span>
+                                        </div>
+                                        <div class="status">
+                                            <img src="img/abort.png" alt="">
+                                            <span class="abort">Abort</span>
+                                        </div>
+                                    </div>
+                                    <div class="list-balance-history-item">
+                                        <div class="description">
+                                            <img class="balance-histoty-item-img" src="img/added1.png" alt="">
+                                            <span>Purchase</span>
+                                        </div>
+                                        <div class="lisence">
+                                            <span>Lisence</span>
+                                        </div>
+                                        <div class="date">
+                                            <span>24.07.18</span>
+                                        </div>
+                                        <div class="sum">
+                                            <span class="withdrawal-money">$ 465.00</span>
+                                        </div>
+                                        <div class="status">
+                                            <img src="img/done.png" alt="">
+                                            <span class="done">Done</span>
+                                        </div>
+                                    </div>
+                            </div>
+                    </div>
+                </div>
+                <div class="return-goods">
+                    <div class="return-goods-head">
+                        <span>Choose goods for return</span>
+                        <button class="return-to-list">Return</button>
+                    </div>
+                        <form class="return-goods-search" action="">
+                                <input type="search" name="serch-returns" id="" placeholder="Search">
+                                <button type="submit"><img src="img/search.png" alt=""></button>
+                        </form>
+                    <div class="goods-for-ferurn">
+                            <div class="purchase-item">
+                                    <div class=purchase-image>
+                                        <a href=""> <img src="img/slider/2.png" alt=""></a>
+                                    </div>
+                                    <div class="item-info">
+                                        <span class="lisence-info">Extended license</span>
+                                        <div class="purchased-item-format">
+                                            <span>120 $</span>
+                                        </div>
+                                    </div>
+                                    <div class="download-purchase">
+                                        <button class="download-purchased-button" id="000">
+                                            <img src="img/returnYellow.png" alt="">
+                                            Request a refund
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="purchase-item">
+                                    <div class=purchase-image>
+                                        <a href=""> <img src="img/slider/5.png" alt=""></a>
+                                    </div>
+                                    <div class="item-info">
+                                        <span class="lisence-info">Extended license</span>
+                                        <div class="purchased-item-format">
+                                            <span>120 $</span>
+                                        </div>
+                                    </div>
+                                    <div class="download-purchase">
+                                        <button class="download-purchased-button" id="000">
+                                            <img src="img/returnYellow.png" alt="">
+                                            Request a refund
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="purchase-item">
+                                    <div class=purchase-image>
+                                        <a href=""> <img src="img/slider/1.png" alt=""></a>
+                                    </div>
+                                    <div class="item-info">
+                                        <span class="lisence-info">Extended license</span>
+                                        <div class="purchased-item-format">
+                                                <span>120 $</span>
+                                        </div>
+                                    </div>
+                                    <div class="download-purchase">
+                                        <button class="download-purchased-button" id="000">
+                                            <img src="img/returnYellow.png" alt="">
+                                            Request a refund
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="purchase-item">
+                                    <div class=purchase-image>
+                                        <a href=""> <img src="img/slider/3.png" alt=""></a>
+                                    </div>
+                                    <div class="item-info">
+                                        <span class="lisence-info">Extended license</span>
+                                        <div class="purchased-item-format">
+                                            <span>120 $</span>
+                                        </div>
+                                    </div>
+                                    <div class="download-purchase">
+                                        <button class="download-purchased-button" id="000">
+                                            <img src="img/returnYellow.png" alt="">
+                                            Request a refund
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="purchase-item">
+                                    <div class=purchase-image>
+                                        <a href=""> <img src="img/slider/6.png" alt=""></a>
+                                    </div>
+                                    <div class="item-info">
+                                        <span class="lisence-info">Extended license</span>
+                                        <div class="purchased-item-format">
+                                            <span>120 $</span>
+                                        </div>
+                                    </div>
+                                    <div class="download-purchase">
+                                        <button class="download-purchased-button" id="000">
+                                            <img src="img/returnYellow.png" alt="">
+                                            Request a refund
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="purchase-item">
+                                    <div class=purchase-image>
+                                        <a href=""> <img src="img/slider/5.png" alt=""></a>
+                                    </div>
+                                    <div class="item-info">
+                                        <span class="lisence-info">Extended license</span>
+                                        <div class="purchased-item-format">
+                                            <span>120 $</span>
+                                        </div>
+                                    </div>
+                                    <div class="download-purchase">
+                                        <button class="download-purchased-button" id="000">
+                                            <img src="img/returnYellow.png" alt="">
+                                            Request a refund
+                                        </button>
+                                    </div>
+                                </div>
+                    </div>
+                </div>
+                <div class="description-for-refound-request">
+                    <div class="refound-request-head">
+                        <span>Describe the reason for the return</span>
+                        <button class="return-to-choice">Return</button>
+                    </div>
+                    <div class="refound-request-main">
+                        <div class="request-main-info">
+                            <span><img src="img/lamp.png" alt=""> Quick advice</span>
+                            <span>Carefully describe the problem, this will speed up the decision of the moderator</span>
+                        </div>
+                        <div class="request-content">
+                            <div class="refound-request-type">
+                                <span class="request-type-title">Type</span>
+                                <div class="select-request-type">
+                                    <span class="current-type">Type reason</span>
+                                    <ul class="drop-down-current-type-list">
+                                        <li class="current-type-list-item" id="1">First type</li>
+                                        <li class="current-type-list-item" id="2">Second type</li>
+                                        <li class="current-type-list-item" id="2">Third type</li>
+                                    </ul>
+                                    <span class="span-arow-type"></span>
+                                </div>
+                            </div>
+                            <div class="refound-request-content">
+                                <span class="request-type-title">Description</span>
+                                <div class="for-textarea">
+                                        <textarea name="" id="textarea" placeholder="Enter description" ></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="long-line"></div>
+        <div class="under-line-button">
+                <button class="abort-button">Cancel</button>
+                <button type="submit" class="submit-button">Create a query</button>
+            </div>
+        <aside class="right-side-nav">
+            <div class="right-side-nav-header">
+                <img src="img/left-side-nav/dash.png" alt=""> 
+                <span class="nav-header-title">DASHBOARD MENU</span>
+            </div>
+            <div class="right-side-nav-user">
+                <img src="img/Bitmap@3x.png" alt="">
+                <span>Yojigraphics</span>
+            </div>
+            <div class="right-side-nav-chat">
+                    <span class="message">2</span>
+                    <img src="img/left-side-nav/chat.png" alt="">
+                    <span>Chat</span>
+            </div>
+            <div class="right-side-nav-refunds">
+                    <span class="message">2</span>
+                    <img src="img/left-side-nav/refunds.png" alt="">
+                    <span>Refunds</span>
+            </div>
+            <div class="right-side-nav-main-link">
+                <ul>
+                    <li class="right-side-nav-link-item"><a href=""><img src="img/left-side-nav/walet.png" alt=""><span> Currency</span></a></li>
+                    <li class="right-side-nav-link-item"><a href=""><img src="img/left-side-nav/downloads.png" alt=""><span> Dowmloaded item</span></a></li>
+                    <li class="right-side-nav-link-item"><a href=""><img src="img/left-side-nav/refProg.png" alt=""><span> Referal program</span></a></li>
+                    <li class="right-side-nav-link-item"><a href=""><img src="img/left-side-nav/bookmarks.png" alt=""><span> Bookmarks</span></a></li>
+                </ul>
+            </div>
+            <div class="right-side-nav-settings">
+                <ul>
+                    <li class="right-side-nav-link-item"><a href=""><img src="img/left-side-nav/settings.png" alt=""><span> User settings</span></a></li>
+                    <li class="right-side-nav-link-item"><a href=""><img src="img/left-side-nav/support.png" alt=""><span> Support</span></a></li>
+                </ul>
+            </div>
+            <div class="right-side-nav-signout">
+                <ul>
+                    <li><a href=""><img src="img/left-side-nav/sign-out.png" alt=""><span> Sign out</span></a></li> 
+                </ul>
+            </div>
+        </aside>
+    </main>
+    <footer>
+        <div class="footer-wrapper">
+            <div class="main-footer">
+                <nav>
+                    <div class="foot-link">
+                        <div class="foot-left">
+                            <ul>
+                                <li><a href="#">3D MARKETPLACE</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="foot-social">
+                        <ul>
+                            <li><a href="#"><img src="img/social/fb.png" alt=""></a></li>
+                            <li><a href="#"><img src="img/social/twitter.png" alt=""></a></li>
+                            <li><a href="#"><img src="img/social/pinterest.png" alt=""></a></li>
+                            <li><a href="#"><img src="img/social/insta.png" alt=""></a></li>
+                            <li><a href="#"><img src="img/social/google.png" alt=""></a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+            <div class="footer-main-link-block">
+                <div class="footer-main-left">
+                    <ul>
+                        <li><a href="index.html">Main</a></li>
+                        <li><a href="">Catalog</a></li>
+                        <li><a href="aboutus.html">About us</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="news.html">News</a></li>
+                        <li><a href="support.html">Support</a></li>
+                        <li><a href="">Authors</a></li>
+                    </ul>
+                </div>
+                <div class="footer-main-center">
+                    <ul>
+                        <li><a href="">Refunds</a></li>
+                        <li><a href="">License of use</a></li>
+                        <li><a href="">Privacy statement</a></li>
+                    </ul>
+                    <ul>
+                        <li><a class="footer-enter">Enter</a></li>
+                        <li><a class="footer-registration">Registration</a></li>
+                    </ul>
+                </div>
+                <div class="footer-main-right">
+                    <p>Learn about the latest news, discounts and promotions.</p>
+                    <form action="">
+                        <input type="email" name="" id="subscription" placeholder="E-mail">
+                        <input type="submit" value="Subscribe">
+                    </form>
+                </div>
+            </div>
+            <div class="footer-catalog">
+                <div class="plus"><span></span><span></span></div>
+                <a href="goods.html" class="link-catalog">Catalog</a>
+                <p>Lorem ipsum dolor consectetur.</p>
+            </div>
+            <div class="footer-floor">
+                <div class="floor-link">
+                    <ul>
+                        <li><a href="#">Referal program</a></li>
+                        <li><a href="#">Custom service</a></li>
+                        <li><a href="#">Sell your items</a></li>
+                    </ul>
+                </div>
+                <div class="floor-copiright">
+                    <p>Copiright © 3D Marketplace 2018. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/moment.min.js"></script>
+    <script src="js/daterangepicker.js"></script>
+    <script src="js/fordash.js"></script>
+    <script src="js/header.js"></script>
+    <script src="js/userpurchase.js"></script>
+</body>
+</html>

@@ -1087,6 +1087,8 @@ a {
 	background: #fff;
 	-webkit-transform: translate(-50%, -50%);
 	transform: translate(-50%, -50%);
+	-webkit-transition: .1s ease-in-out;
+	transition: .1s ease-in-out;
 }
 
 .modal-alert p {

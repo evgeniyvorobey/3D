@@ -768,6 +768,7 @@ a{
     min-height: 80px;
     background: #fff;
     transform: translate(-50%,-50%);
+    transition: .1s ease-in-out;
 }
 .modal-alert p{
     width: 90%;
