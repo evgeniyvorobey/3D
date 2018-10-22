@@ -29,6 +29,7 @@
   "dependencies": {
     "browser-sync": "^2.24.4",
     "hoek": "^5.0.3",
+    "lodash": "^4.17.11",
     "save": "^2.3.2"
   }
 }

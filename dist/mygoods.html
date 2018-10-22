@@ -156,11 +156,283 @@
     <main>
         <div class="long-line"></div>
         <h1>Goods</h1>
-        <div class="top-nav-button">
-            <button class="style-button"> <img src="img/models.png" alt=""> My goods</button>
+        <div class=" tile top-nav-button">
+            <button class="active style-button"> <img src="img/3dmodel.png" alt=""> My goods</button>
             <button class="style-button"> <img src="img/eye.png" alt=""> View Statistics</button>
             <button class="style-button"> <img src="img/Promotions.png" alt=""> Promotions</button>
-            <button class="style-button"> <img src="img/statistics.png" alt=""> Marketplace statistics</button>
+            <button class="style-button"> <img src="img/statistics.png" alt=""> Statistics</button>
+        </div>
+        <div class="container">
+            <div class="my-goods">
+                    <div class="my-goods-header-main">
+                        <div class="tile goods-header-main-info">
+                            <span class="little-title">Goods</span>
+                            <div class=" wrapper-for-main-info">
+                                    <span class="style-big-dark my-goods-item">12</span>
+                                    <div class="my-goods-item-in-month">
+                                        <img src="img/imgIcon.png" alt="">
+                                        <span class="style-little-dark">2</span>
+                                        <span class="style-little-light">month</span>
+                                    </div>
+                                    <div class="my-goods-active">
+                                        <img src="img/play.png" alt="">
+                                        <span class="style-little-dark">11</span>
+                                        <span class="style-little-light">published</span>
+                                    </div>
+                                    <div class="my-goods-pause">
+                                        <img src="img/pause.png" alt="">
+                                        <span class="style-little-dark">23</span>
+                                        <span class="style-little-light">pause</span>
+                                    </div>
+                                    <div class="my-goods-verification">
+                                        <img src="img/verification.png" alt="">
+                                        <span class="style-little-dark">3</span>
+                                        <span class="style-little-light">verification</span>
+                                    </div>
+                                    <a href="uploadingGoods.html" class="upload-3d-model button-yellow">Upload 3D model</a>
+                            </div>
+                        </div>
+                        <div class="tile goods-header-rating">
+                            <span class="little-title">Average rating</span>
+                            <div class="goods-header-raiting-info">
+                                <div class="header-raiting-status">
+                                    <span class="style-big-dark">3.</span>
+                                    <span class="style-little-dark">02</span>
+                                    <img src="img/StarCopy.png" alt="">
+                                </div>
+                                <div class="header-raiting-status-changes">
+                                    <img src="img/arrowred.png" alt="">
+                                    <span class="style-little-dark">0.2</span>
+                                    <span class="style-little-light">month</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class=" tile my-goods-body">
+                            <div class="my-goods-body-top">
+                                <div class="my-goods-body-top-nav">
+                                    <div class="body-top-nav-left">
+                                        <span class="little-title">My goods</span>
+                                        <button class="my-goods-filter-show">Filter <span class="filter-show-arrow"></span> </button>
+                                    </div>
+                                    <div class="body-top-nav-right">
+                                        <span class="top-nav-right-selected-item"> <span class="style-little-dark" id="selected-item">2</span> items selected</span>
+                                        <div class="div-style-input top-nav-right-set-price">
+                                            <input type="number" name="" id="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class=" tile my-goods-body-top-filter">
+                                    <div class=" div-style-input top-filter-name"><input type="text" placeholder="Name" id="search-name"></div>
+                                    <div class=" div-style-input top-filter-key"><input type="text" placeholder="Key word" id="search-key"></div>
+                                    <div class=" div-style-input top-filter-format"><input type="text" placeholder="Format" id="search-format"></div>
+                                    <button class="rating-button">Rating<span class="rating-button-arrow"></span></button>
+                                </div>
+                                <div class="active-filter">
+                                    <div class="active-filter-item">
+                                        <span>Cinema 4D</span>
+                                        <button class="delete-this-filter"></button>
+                                    </div>
+                                    <div class="active-filter-item">
+                                        <span>.obg</span>
+                                        <button class="delete-this-filter"></button>
+                                    </div>
+                                    <div class="active-filter-item">
+                                        <span>Bird</span>
+                                        <button class="delete-this-filter"></button>
+                                    </div>
+                                </div>
+                                <div class="long-line"></div>
+                            </div>
+                            <div class="tile my-goods-body-item-wrapper">
+                                    <div class="item-wrapper-description">
+                                        <div class="wrapper-description-checkbox">
+                                            <input type="checkbox" name="check-all" id="check-all">
+                                        </div>
+                                        <div class="wrapper-description-img">
+                                            <span>Image</span>
+                                        </div>
+                                        <div class="clicked wrapper-description-name">
+                                            <span>Name 
+                                                <span class="button-top-botom">
+                                                    <span class="button-top"></span>
+                                                    <span class="button-bottom"></span>
+                                                </span>
+                                            </span>
+                                        </div>
+                                        <div class="clicked wrapper-description-edit">
+                                            <span>Edit 
+                                                <span class="button-top-botom">
+                                                    <span class="button-top"></span>
+                                                    <span class="button-bottom"></span>
+                                                </span>
+                                            </span>
+                                        </div>
+                                        <div class="clicked wrapper-description-price">
+                                            <span>Price 
+                                                <span class="button-top-botom">
+                                                    <span class="button-top"></span>
+                                                    <span class="button-bottom"></span>
+                                                </span>
+                                            </span>
+                                        </div>
+                                        <div class="clicked wrapper-description-rating">
+                                            <span>Rating 
+                                                <span class="button-top-botom">
+                                                    <span class="button-top"></span>
+                                                    <span class="button-bottom"></span>
+                                                </span>
+                                            </span>
+                                        </div>
+                                        <div class="clicked wrapper-description-earned">
+                                            <span>Earned 
+                                                <span class="button-top-botom">
+                                                    <span class="button-top"></span>
+                                                    <span class="button-bottom"></span>
+                                                </span>
+                                            </span>
+                                        </div>
+                                        <div class="clicked wrapper-description-status">
+                                            <span>Status 
+                                                <span class="button-top-botom">
+                                                    <span class="button-top"></span>
+                                                    <span class="button-bottom"></span>
+                                                </span>
+                                            </span>
+                                        </div>
+                                        <div class="wrapper-description-actions">
+                                            <span>Actions</span>
+                                        </div>
+                                    </div>
+                                    <div class="long-line"></div>
+                                    <div class="my-item">
+                                            <div class="shade-for-item"></div>
+                                        <div class="wrapper-description-checkbox">
+                                            <input type="checkbox" name="check-all" id="check-all">
+                                        </div>
+                                        <div class="wrapper-description-img">
+                                            <a href=""><img src="img/w91.png" alt=""></a>
+                                        </div>
+                                        <div class=" wrapper-description-name">
+                                            <span>Some name 
+                                            </span>
+                                        </div>
+                                        <div class=" wrapper-description-edit">
+                                            <span>2018.05.02 
+                                            </span>
+                                        </div>
+                                        <div class=" wrapper-description-price">
+                                            <span><span class="my-item-price">$12</span>.00 
+                                            </span>
+                                        </div>
+                                        <div class=" wrapper-description-rating">
+                                            <span><img src="img/starTransparent.png" alt=""> 3,2 
+                                            </span>
+                                        </div>
+                                        <div class=" wrapper-description-earned">
+                                            <span><span class="earned-in-item">$15.00</span>
+                                            </span>
+                                        </div>
+                                        <div class=" wrapper-description-status">
+                                            <span>Added
+                                            </span>
+                                        </div>
+                                        <div class="wrapper-description-actions-item">
+                                            <a href=""><img src="img/deleteButton.png" alt=""></a>
+                                            <a href=""><img src="img/editButton.png" alt=""></a>
+                                            <a href=""><img src="img/greenOnButton.png" alt=""></a>
+                                        </div>
+                                    </div>
+                                    <div class="my-item">
+                                        <div class="shade-for-item"></div>
+                                        <div class="wrapper-description-checkbox">
+                                            <input type="checkbox" name="check-all" id="check-all">
+                                        </div>
+                                        <div class="wrapper-description-img">
+                                            <a href=""><img src="img/w91.png" alt=""></a>
+                                        </div>
+                                        <div class=" wrapper-description-name">
+                                            <span>Some name 
+                                            </span>
+                                        </div>
+                                        <div class=" wrapper-description-edit">
+                                            <span>2018.05.02 
+                                            </span>
+                                        </div>
+                                        <div class=" wrapper-description-price">
+                                            <span><span class="my-item-price">$12</span>.00 
+                                            </span>
+                                        </div>
+                                        <div class=" wrapper-description-rating">
+                                            <span><img src="img/starTransparent.png" alt=""> 3,2 
+                                            </span>
+                                        </div>
+                                        <div class=" wrapper-description-earned">
+                                            <span><span class="earned-in-item">$15.00</span>
+                                            </span>
+                                        </div>
+                                        <div class=" wrapper-description-status">
+                                            <span>Stoped
+                                            </span>
+                                        </div>
+                                        <div class="wrapper-description-actions-item">
+                                            <a href=""><img src="img/deleteButton.png" alt=""></a>
+                                            <a href=""><img src="img/editButton.png" alt=""></a>
+                                            <a href=""><img src="img/onButtonTran.png" alt=""></a>
+                                        </div>
+                                    </div>
+                                    <div class="my-item">
+                                        <div class="shade-for-item"></div>
+                                        <div class="wrapper-description-checkbox">
+                                            <input type="checkbox" name="check-all" id="check-all">
+                                        </div>
+                                        <div class="wrapper-description-img">
+                                            <a href=""><img src="img/w91.png" alt=""></a>
+                                        </div>
+                                        <div class=" wrapper-description-name">
+                                            <span>Some name 
+                                            </span>
+                                        </div>
+                                        <div class=" wrapper-description-edit">
+                                            <span>2018.05.02 
+                                            </span>
+                                        </div>
+                                        <div class=" wrapper-description-price">
+                                            <span><span class="my-item-price">$12</span>.00 
+                                            </span>
+                                        </div>
+                                        <div class=" wrapper-description-rating">
+                                            <span><img src="img/starTransparent.png" alt=""> 3,2 
+                                            </span>
+                                        </div>
+                                        <div class=" wrapper-description-earned">
+                                            <span><span class="earned-in-item">$15.00</span>
+                                            </span>
+                                        </div>
+                                        <div class=" wrapper-description-status">
+                                            <span>Check
+                                            </span>
+                                        </div>
+                                        <div class="wrapper-description-actions-item">
+                                            <a href=""><img src="img/deleteButton.png" alt=""></a>
+                                            <a href=""><img src="img/editButton.png" alt=""></a>
+                                            <a href=""><img src="img/pauseBut.png" alt=""></a>
+                                        </div>
+                                    </div>
+                            </div>
+                    </div>
+            </div>
+            <div class="pages-button">
+                    <ul>
+                        <li><a href=""></a></li>
+                        <li class="active-page"><a class="active-link" href="">1</a></li>
+                        <li><a href="">2</a></li>
+                        <li><a href="">3</a></li>
+                        <li><a href="">4</a></li>
+                        <li><a href="">5</a></li>
+                        <li><a href=""></a></li>
+                    </ul>
+                </div>
         </div>
         <aside class="right-side-nav">
             <div class="right-side-nav-header">
