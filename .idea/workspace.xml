@@ -2,17 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d483e8d7-dc99-4422-a0fa-a216ca09fc39" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/dist.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/css/mygoods.css" beforeDir="false" afterPath="$PROJECT_DIR$/dist/css/mygoods.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/img/search.png" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/search.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/img/statistics.png" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/statistics.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/js/mygoods.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/js/mygoods.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/mygoods.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/mygoods.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/img/search.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/img/search.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/img/statistics.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/img/statistics.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/js/mygoods.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/mygoods.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mygoods.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/mygoods.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/mygoods.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/mygoods.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -28,18 +18,20 @@
       <usages-collector id="statistics.lifecycle.project">
         <counts>
           <entry key="project.closed" value="3" />
-          <entry key="project.open.time.1" value="2" />
+          <entry key="project.open.time.1" value="3" />
           <entry key="project.open.time.8" value="1" />
-          <entry key="project.opened" value="3" />
+          <entry key="project.opened" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="js" value="5" />
+          <entry key="json" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
+          <entry key="JSON" value="1" />
           <entry key="JavaScript" value="5" />
         </counts>
       </usages-collector>
@@ -81,11 +73,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/js/goods.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="76" column="12" lean-forward="true" selection-start-line="76" selection-start-column="12" selection-end-line="76" selection-end-column="12" />
+            <state>
+              <caret line="76" column="12" selection-start-line="76" selection-start-column="12" selection-end-line="76" selection-end-column="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/package-lock.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="206">
+              <caret line="1204" column="25" selection-start-line="1204" selection-start-column="25" selection-end-line="1204" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -95,6 +96,9 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>fe</find>
+      <find>hoek</find>
+      <find>lodash</find>
+      <find>cryptiles</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -104,6 +108,7 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/js/header.js" />
+        <option value="$PROJECT_DIR$/package-lock.json" />
       </list>
     </option>
   </component>
@@ -139,6 +144,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -146,22 +152,10 @@
               <item name="3D" type="b2602c69:ProjectViewProjectNode" />
               <item name="3D" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="3D" type="b2602c69:ProjectViewProjectNode" />
-              <item name="3D" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="3D" type="b2602c69:ProjectViewProjectNode" />
-              <item name="3D" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -194,14 +188,16 @@
       <workItem from="1537952468758" duration="1211000" />
       <workItem from="1537972062408" duration="6000" />
       <workItem from="1540192404316" duration="323000" />
+      <workItem from="1540192739163" duration="422000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1540000" />
+    <option name="totallyTimeSpent" value="1962000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="656" y="23" width="1024" height="975" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23728813" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -218,7 +214,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.3298731" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.23529412" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -249,8 +245,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/js/goods.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="76" column="12" lean-forward="true" selection-start-line="76" selection-start-column="12" selection-end-line="76" selection-end-column="12" />
+        <state>
+          <caret line="76" column="12" selection-start-line="76" selection-start-column="12" selection-end-line="76" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package-lock.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="206">
+          <caret line="1204" column="25" selection-start-line="1204" selection-start-column="25" selection-end-line="1204" selection-end-column="25" />
         </state>
       </provider>
     </entry>
